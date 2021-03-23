@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Landing from "../views/Landing.vue";
 import Home from "../views/Home.vue";
 import Galerie from "../views/Galerie.vue";
+import Biographie from "../views/Biographie.vue";
 import Quizz from "../views/Quizz.vue";
 import Mentions from "../views/Mentions.vue";
 import Contact from "../views/Contact.vue";
@@ -27,6 +28,14 @@ const routes = [
     path: "/galerie",
     name: "Galerie",
     component: Galerie,
+    meta: {
+      header: 1
+    }
+  },
+  {
+    path: "/biographie",
+    name: "Biographie",
+    component: Biographie,
     meta: {
       header: 1
     }

@@ -1,10 +1,5 @@
 <template>
   <div class="about">
-    <header id="header" class="header">
-           <!-- nav-->
-          
-       </header>
-       <main>
            <h1>A PROPOS</h1>
            <article id="Notre_projet">
                <h2>Notre projet</h2>
@@ -21,7 +16,7 @@
                <section id="descriptions">
                    <section>
                        <div class="description_perso">
-                           <div class="img"><img src="img/eole.png" alt=""></div>
+                           <div class="img"><img src="@/assets/img/eole.png" alt=""></div>
                            <div class="nom_description">
                                <h3>Eole GAUTHE</h3>
                                <p>Eole est capvierdienne béninoise française . Née en France, elle vécu 18 ans au Bénin,
@@ -30,7 +25,7 @@
                            </div>
                        </div>
                        <div class="description_perso">
-                           <div class="img"><img src="img/coco.png" alt=""></div>
+                           <div class="img"><img src="@/assets/img/coco.png" alt=""></div>
                            <div class="nom_description">
                                <h3>Coralie OUEDRAOGO</h3>
                                <p>Coralie est Burkinabè mais a étudiée durant 7 années au Bénin. Elle a pu y bénéficier d'une formation militaire. Grace à cette formation,
@@ -42,7 +37,7 @@
                    </section>
                    <section>
                        <div class="description_perso">
-                           <div class="img"><img src="img/fifi.png" alt=""></div>
+                           <div class="img"><img src="@/assets/img/fifi.png" alt=""></div>
                            <div class="nom_description">
                                <h3>Fideline BAZANA</h3>
                                <p>Curieuse et prévoyante. Au collège, Fideline avait déjà fait une liste des métiers souhaitait faire de l’ingénieur aéronautique
@@ -52,7 +47,7 @@
                            </div>
                        </div>
                        <div class="description_perso">
-                           <div class="img"><img src="img/dona.png" alt=""></div>
+                           <div class="img"><img src="@/assets/img/dona.png" alt=""></div>
                            <div class="nom_description">
                                <h3>Dona DENKEY DANDJEIN</h3>
                                <p>Dona est une jeune étudiante de 18 ans. Née en France, elle est d'origine Camerounaise et Togolaise.
@@ -66,40 +61,11 @@
                </section>
 
            </article>
-
-       </main>
-       <footer>
-           <h4>© AG STUDIO ©</h4>
-       </footer>
   </div>
 </template>
-<style>
-body{
-    background-color: black;
-    color: white;
-    font-family: Poppins;
-}
-/* width */
-::-webkit-scrollbar {
-    width: 20px;
-    background: black;
-}
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px;
-    border-radius: 10px;
-    background: black;
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #bb9a73;
-    border-radius: 10px;
-}
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #a58763;
-}
-h1, h2{
+<style scoped>
+
+ h2{
     text-align: center;
 }
 h3{
@@ -107,6 +73,7 @@ h3{
     margin-left: 20px;
 }
 h1{
+    color: white;
     padding-top: 30px;
     text-decoration: underline white;
 }
@@ -115,10 +82,12 @@ h1, #Notre_projet h2{
 }
 #Notre_projet {
     height: 55vh;
+    color: white;
 }
-main{
+.about{
    margin-left: 5%;
    margin-right: 5%;
+   font-family: Poppins;
 }
 #nous{
     height: 115vh;
@@ -126,6 +95,7 @@ main{
 }
 #nous h2{
     margin-bottom: 25px;
+    color: white;
 }
 #descriptions{
     width: 95%;
@@ -138,6 +108,7 @@ main{
     margin-top: 10px;
 }
 .description_perso p{
+    color: white;
     height: 25vh;
     text-align: left;
     padding-left: 20px;
