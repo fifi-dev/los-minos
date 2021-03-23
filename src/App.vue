@@ -39,12 +39,6 @@ export default {
 @import './assets/css/animations.css';
 @import './assets/css/fonts.css';
 
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
 /* width */
 ::-webkit-scrollbar {
     width: 20px;
