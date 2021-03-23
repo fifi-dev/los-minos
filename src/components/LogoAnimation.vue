@@ -44,6 +44,7 @@ export default {
 h1 {
     font-size: 70px;
     color: white;
+    font-family: 'Roboto Slab', serif;
 }
 
 .typewriter h1 {
