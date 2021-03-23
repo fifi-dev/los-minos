@@ -12,6 +12,7 @@
 
 <style>
 @import './assets/css/animations.css';
+@import './assets/css/fonts.css';
 
 body{
   margin: 0;
