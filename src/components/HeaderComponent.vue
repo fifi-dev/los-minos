@@ -1,6 +1,6 @@
 <template>
-  <div class="settings-card">
-    <h1>Settings card</h1>
+  <div class="header-component">
+      
   </div>
 </template>
 
