@@ -99,18 +99,13 @@ body{
 ::-webkit-scrollbar-thumb:hover {
     background: #a58763;
 }
-
-
 h1, h2{
     text-align: center;
 }
-
 h3{
     color: #bb9a73;
     margin-left: 20px;
 }
-
-
 h1{
     padding-top: 30px;
     text-decoration: underline white;
@@ -155,11 +150,9 @@ main{
     width: 75%;
     margin-left: 15px;
 }
-
 #black{
     background-color: black;
 }
-
 #Notre_projet{
     padding-top: 60px;
     text-align: center;
