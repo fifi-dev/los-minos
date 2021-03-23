@@ -79,63 +79,38 @@ body{
     color: white;
     font-family: Poppins;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ed52f246af700a6d7cb458a3ebc44bc7278ed30b
 /* width */
 ::-webkit-scrollbar {
     width: 20px;
     background: black;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ed52f246af700a6d7cb458a3ebc44bc7278ed30b
 /* Track */
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px;
     border-radius: 10px;
     background: black;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ed52f246af700a6d7cb458a3ebc44bc7278ed30b
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #bb9a73;
     border-radius: 10px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ed52f246af700a6d7cb458a3ebc44bc7278ed30b
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #a58763;
 }
-<<<<<<< HEAD
-h1, h2{
-    text-align: center;
-}
-=======
 
 
 h1, h2{
     text-align: center;
 }
 
->>>>>>> ed52f246af700a6d7cb458a3ebc44bc7278ed30b
 h3{
     color: #bb9a73;
     margin-left: 20px;
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> ed52f246af700a6d7cb458a3ebc44bc7278ed30b
 h1{
     padding-top: 30px;
     text-decoration: underline white;
@@ -150,10 +125,6 @@ main{
    margin-left: 5%;
    margin-right: 5%;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ed52f246af700a6d7cb458a3ebc44bc7278ed30b
 #nous{
     height: 115vh;
     padding-top: 50px;
@@ -161,10 +132,6 @@ main{
 #nous h2{
     margin-bottom: 25px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ed52f246af700a6d7cb458a3ebc44bc7278ed30b
 #descriptions{
     width: 95%;
     display: flex;
@@ -188,26 +155,16 @@ main{
     width: 75%;
     margin-left: 15px;
 }
-<<<<<<< HEAD
-#black{
-    background-color: black;
-}
-=======
 
 #black{
     background-color: black;
 }
 
->>>>>>> ed52f246af700a6d7cb458a3ebc44bc7278ed30b
 #Notre_projet{
     padding-top: 60px;
     text-align: center;
     height: 40vh;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ed52f246af700a6d7cb458a3ebc44bc7278ed30b
 #Notre_projet p{
     text-align: center;
     width: 50%;
