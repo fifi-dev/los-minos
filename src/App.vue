@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <div v-if="$route.meta.header === 1" id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
@@ -8,7 +8,23 @@
   </div>
 </template>
 
+
+
 <style>
+@import './assets/css/animations.css';
+
+body{
+  margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

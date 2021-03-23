@@ -1,14 +1,59 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import Landing from "../views/Landing.vue";
 import Home from "../views/Home.vue";
+import Galerie from "../views/Galerie.vue";
+import Quizz from "../views/Quizz.vue";
+import Mentions from "../views/Mentions.vue";
+import Contact from "../views/Contact.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
+    name: "Landing",
+    component: Landing,
+  },
+  {
+    path: "/home",
     name: "Home",
     component: Home,
+    meta: {
+      header: 1
+    }
+  },
+  {
+    path: "/galerie",
+    name: "Galerie",
+    component: Galerie,
+    meta: {
+      header: 1
+    }
+  },
+  {
+    path: "/quizz",
+    name: "Quizz",
+    component: Quizz,
+    meta: {
+      header: 1
+    }
+  },
+  {
+    path: "/mentions",
+    name: "Mentions",
+    component: Mentions,
+    meta: {
+      header: 1
+    }
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Contact,
+    meta: {
+      header: 1
+    }
   },
   {
     path: "/about",
@@ -18,6 +63,9 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
+      meta: {
+        header: 1
+      }
   },
 ];
 
