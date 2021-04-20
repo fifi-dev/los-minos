@@ -4,7 +4,7 @@
     <audio autoplay id="myMusic" src="audio/backsong.mp3" loop=""></audio>
     <div class="wrapper">
       <div class="box item-1">
-        <img src="@/assets/img/1-amazones.jpg" alt="" />
+        <img src="@/assets/img/1-amazones.jpg" alt="Photo de groupe d'amazones" />
         <div class="overlay ovrl-left ovrl-1"></div>
         <div class="overlay ovrl-right ovrl-1"></div>
         <div class="locker">
@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="box item-2">
-        <img src="@/assets/img/68fcc8_ee8dc31a71794950a6126cbecd3c5365_mv2.jpg" alt="" />
+        <img src="@/assets/img/68fcc8_ee8dc31a71794950a6126cbecd3c5365_mv2.jpg" alt="Photo de groupe d'amazones" />
         <div class="overlay ovrl-left ovrl-2"></div>
         <div class="overlay ovrl-right ovrl-2"></div>
         <div class="locker">
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="box item-3">
-        <img src="@/assets/img/8848bf_c9fcf906c5f4a32a0f53a0d404e98f59.jpg" alt="" />
+        <img src="@/assets/img/8848bf_c9fcf906c5f4a32a0f53a0d404e98f59.jpg" alt="Amazones en entrainement" />
         <div class="overlay ovrl-left ovrl-3"></div>
         <div class="overlay ovrl-right ovrl-3"></div>
         <div class="locker">
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="box item-4">
-        <img src="@/assets/img/amazones-du-dahomey-vers-1890-620x400.jpg" alt="" />
+        <img src="@/assets/img/amazones-du-dahomey-vers-1890-620x400.jpg" alt="Amazones et leur Roi" />
         <div class="overlay ovrl-left ovrl-4"></div>
         <div class="overlay ovrl-right ovrl-4"></div>
         <div class="locker">
@@ -38,7 +38,7 @@
       <div class="box item-5">
         <img
           src="@/assets/img/behanzin.jpg"
-          alt=""
+          alt="Amazones et leur Roi"
         />
         <div class="overlay ovrl-left ovrl-5"></div>
         <div class="overlay ovrl-right ovrl-5"></div>
@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="box item-6">
-        <img src="@/assets/img/guerres-franco-dahomeenes.jpg" alt="" />
+        <img src="@/assets/img/guerres-franco-dahomeenes.jpg" alt="Guerre entre les colons et les amazones" />
         <div class="overlay ovrl-left ovrl-6"></div>
         <div class="overlay ovrl-right ovrl-6"></div>
         <div class="locker">
@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="box item-7">
-        <img src="@/assets/img/images (1).jpg" alt="" />
+        <img src="@/assets/img/images (1).jpg" alt="Visage d'une amazone" />
         <div class="overlay ovrl-left ovrl-7"></div>
         <div class="overlay ovrl-right ovrl-7"></div>
         <div class="locker">
@@ -65,7 +65,7 @@
       <div class="box item-8">
         <img
           src="@/assets/img/Les_survivantes_des_Amazones_de_Behanzin_(Dahomey).jpg"
-          alt=""
+          alt="Survivantes des Amazones de Behanzin"
         />
         <div class="overlay ovrl-left ovrl-8"></div>
         <div class="overlay ovrl-right ovrl-8"></div>
@@ -74,7 +74,7 @@
         </div>
       </div>
       <div class="box item-9">
-        <img src="@/assets/img/les-amazones-du-dahomey-ban2.jpg" alt="" />
+        <img src="@/assets/img/les-amazones-du-dahomey-ban2.jpg" alt="Photo de groupe d'amazones" />
         <div class="overlay ovrl-left ovrl-9"></div>
         <div class="overlay ovrl-right ovrl-9"></div>
         <div class="locker">
@@ -100,7 +100,7 @@ export default {
             $(gate[i]).toggleClass("move-left");
           }
         }
-        // removes the click event after reveling the image
+        
         $(this).off();
       });
     });
