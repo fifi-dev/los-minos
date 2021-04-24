@@ -8,15 +8,19 @@
             <div id="logo" class="logo">
                 <img src="@/assets/img/logo_1.png" alt="">
             </div>
-            <a class="button" href="/home">
-            <circle-button></circle-button>
-            </a>
+            <div class="div_button">
+                <a class="button" href="/home">
+                <circle-button></circle-button>
+                </a>
+            </div>
+
         </div>
     </div>
   </div>
 </template>
 
 <script>
+import $ from "jquery";
 import CircleButton from './CircleButton.vue';
 export default {
   name: "logo_animation",
@@ -39,6 +43,7 @@ export default {
     width: 600px;
     margin: auto;
     margin-top: 25vh;
+    background-color: darkgoldenrod;
 }
 
 h1 {
@@ -62,15 +67,9 @@ h1 {
         blink-caret .75s step-end infinite;
 }
 
-
-
-
 .logo {
     width: 40vw;
-    margin-top: 5%;
-    margin-bottom: 2%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2% auto;
     animation-name: bounceIn;
     animation-duration: 450ms;
     animation-timing-function: linear;
@@ -82,5 +81,37 @@ h1 {
 
 .button{
     margin-left: 50%;
+}
+
+@media(min-width: 768px) and (max-width: 1388px) {
+
+.appear{
+      margin-top: 4%;
+}
+
+.logo {
+    width: 35vw;
+}
+
+.div_button{
+    margin-top: 5%;
+}
+
+}
+
+@media(max-width: 767px) {
+
+.appear{
+      margin-top: 10%;
+}
+
+.logo {
+    width: 50vw;
+}
+
+.div_button{
+    margin-top: 15%;
+}
+
 }
 </style>
