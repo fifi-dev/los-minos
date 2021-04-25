@@ -38,7 +38,6 @@
       </div>
       <div class="petitediv">
           <p>@ AG STUDIO - 2020</p>
-
       </div>
   </div>
   </div>
