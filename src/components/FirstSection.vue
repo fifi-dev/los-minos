@@ -33,6 +33,14 @@ export default {
 
 <style scoped>
 
+.section {
+    height: 100vh;
+    overflow: hidden;
+     margin: 10vh auto;
+    margin-bottom: 20vh;
+
+}
+
 .margin{
     margin-left: 10vw;
 }

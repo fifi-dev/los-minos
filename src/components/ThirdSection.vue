@@ -32,15 +32,27 @@ export default {
 };
 </script>
 <style scoped>
+
+.section {
+    height: 100vh;
+    overflow: hidden;
+     margin: 10vh auto;
+    margin-bottom: 20vh;
+
+}
+
 .button {
     width: 40px;
 }
+
+/*
 
 .section3{
     display: none;
     width: 80vw;
     margin: 0 auto;
 }
+ */
 
 .imgC{
     width: 50vw;

@@ -43,7 +43,13 @@ export default {
 
 <style scoped>
 
+.section {
+    height: 100vh;
+    overflow: hidden;
+     margin: 10vh auto;
+    margin-bottom: 20vh;
 
+}
 
 .section {
     height: 100vh;

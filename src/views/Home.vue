@@ -147,6 +147,8 @@ export default {
 
     });
 
+    /*
+
     $("#btn1").on('click', function(){
     $('#section2').fadeIn(500);
      $('#section1').fadeOut();
@@ -176,7 +178,7 @@ export default {
     $('#section7').fadeIn(500);
      $('#section6').fadeOut();
     });
-
+*/
 
 
 
@@ -233,6 +235,7 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 10vh auto;
+    margin-bottom: 20vh;
 }
 
 
