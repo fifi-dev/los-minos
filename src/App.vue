@@ -72,36 +72,29 @@ export default {
 @import './assets/css/animations.css';
 @import './assets/css/fonts.css';
 
-::-webkit-scrollbar {
-    width: 20px;
-    background: black;
-    display: none;
-}
-
-/* width 
+/* width */
 ::-webkit-scrollbar {
     width: 20px;
     background: black;
 }
 
-/* Track 
+/* Track */
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px;
     border-radius: 10px;
     background: black;
 }
 
-/* Handle
+/* Handle */
 ::-webkit-scrollbar-thumb {
     background: #bb9a73;
     border-radius: 10px;
 }
-/* Handle on hover 
+
+/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #a58763;
 }
-
-*/
 
 body{
   margin: 0;
