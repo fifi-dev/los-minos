@@ -39,11 +39,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .typewriter {
-    width: 600px;
+    max-width: 600px;
     margin: auto;
     margin-top: 25vh;
-    background-color: darkgoldenrod;
 }
 
 h1 {
@@ -51,7 +51,13 @@ h1 {
     color: white;
 }
 
+.div_button{
+    padding: 50px;
+    height: 50%;
+}
+
 .typewriter h1 {
+    background-color: tomato;
     overflow: hidden;
     /* On s'assure que rien n'apparait avant l'animation */
     border-right: .15em solid orange;
@@ -68,50 +74,30 @@ h1 {
 }
 
 .logo {
-    width: 40vw;
-    margin: 2% auto;
+    /* width: 40vw; */
+    width: 100%;
+    height: 50%;
     animation-name: bounceIn;
     animation-duration: 450ms;
     animation-timing-function: linear;
 }
 
+.logo img{
+      width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+.container{
+     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .appear{
     display: none;
+    height: 100%;
 }
 
-.button{
-    margin-left: 50%;
-}
-
-@media(min-width: 768px) and (max-width: 1388px) {
-
-.appear{
-      margin-top: 4%;
-}
-
-.logo {
-    width: 35vw;
-}
-
-.div_button{
-    margin-top: 5%;
-}
-
-}
-
-@media(max-width: 767px) {
-
-.appear{
-      margin-top: 10%;
-}
-
-.logo {
-    width: 50vw;
-}
-
-.div_button{
-    margin-top: 15%;
-}
-
-}
 </style>

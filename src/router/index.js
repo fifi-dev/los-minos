@@ -4,6 +4,7 @@ import Landing from "../views/Landing.vue";
 import Home from "../views/Home.vue";
 import Galerie from "../views/Galerie.vue";
 import Biographie from "../views/Biographie.vue";
+import Pre_quizz from "../views/Pre_quizz.vue";
 import Quizz from "../views/Quizz.vue";
 import Mentions from "../views/Mentions.vue";
 import Contact from "../views/Contact.vue";
@@ -36,6 +37,14 @@ const routes = [
     path: "/biographie",
     name: "Biographie",
     component: Biographie,
+    meta: {
+      header: 1
+    }
+  },
+  {
+    path: "/pre_quizz",
+    name: "Pre_quizz",
+    component: Pre_quizz,
     meta: {
       header: 1
     }
