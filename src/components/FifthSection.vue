@@ -11,7 +11,7 @@
                        <button id="listenBtn2"><i class="fas fa-assistive-listening-systems"></i></button>
                     <audio id="audio2" src="@/assets/audio/section2.mp3"></audio>
                    </div>
-                   <a class="button" href="#section6"><navigate-btn v-show="BtnVisible"></navigate-btn ></a>
+                   <a class="button" id="btn5" href="#"><navigate-btn v-show="BtnVisible"></navigate-btn ></a>
                </article>
     </div>
 </template>
@@ -64,7 +64,9 @@ export default {
     width: 390px;
 }
 
-
+#section5{
+    display: none;
+}
 
 .picture {
     width: 320px;

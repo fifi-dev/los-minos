@@ -1,7 +1,7 @@
 <template>
     <div class="second-section">
     <article class="section" id="section2">
-                   <a class="button" href="#section3"><navigate-btn></navigate-btn ></a>
+                   <a class="button" id="btn2" href="#section3"><navigate-btn></navigate-btn ></a>
                    <p>Il était une fois, dans le royaume de Dahomey</p>
                    <div class="image-slider">
 <div><img src="@/assets/img/royaume dahomey.jpg"></div>
@@ -51,10 +51,9 @@ export default {
 
 <style scoped>
 
-.section {
-    height: 100vh;
-    overflow: hidden;
-    margin-bottom: 20vh;
+
+#section2{
+    display: none;
 }
 
 .button {

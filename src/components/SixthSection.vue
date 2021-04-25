@@ -20,7 +20,7 @@
 	<div class="card" id="c7"></div>
 </div> 
                   <!--  <vue-carrousel></vue-carrousel> -->
-                   <a class="button" href="#section7"><navigate-btn></navigate-btn ></a>
+                   <a class="button" id="btn6" href="#section7"><navigate-btn></navigate-btn ></a>
                </article>
 </div>
 </template>
@@ -103,6 +103,10 @@ export default {
     display: block;
     font-size: 16px;
 
+}
+
+#section6{
+    display: none;
 }
 
 .detail a {

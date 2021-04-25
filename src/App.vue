@@ -13,59 +13,14 @@
     <ul>
         <li><a href="/home">Accueil</a></li>
         <li><a href="/biographie">Biographie de Tassi Hangbe</a></li>
-        <li><a href="gallerie.php">Galerie</a></li>
-        <li><a href="a_propos.php">A Propos</a></li>
-        <li><a href="mentions_legales.php">Mentions legales</a></li>
-        <li><a href="pre_quizz.php">Quizz</a></li>
+        <li><a href="/galerie">Galerie</a></li>
+        <li><a href="/about">A Propos</a></li>
+        <li><a href="/mentions">Mentions legales</a></li>
+        <li><a href="/quizz">Quizz</a></li>
         <li><a href="mailto:nullepart@mozilla.org"><i class="fas fa-envelope"></i></a></li>
     </ul>
 </nav>
     </div>
-    <div class="settings-card" v-if="$route.meta.header === 1">
-    <div class="panel" >
-               <div class="popup">
-                   <h1>Quelle experience souhaitez-vous ?</h1>
-                   <div class="info">Pour vous offrir la meilleure experience possible, merci de cocher les cases en bas avant de choisir un mode</div>
-                   <div class="mode">
-                       <div class="read">
-                           <i class="fas fa-book"></i><br>
-                           <button id="readMode" class="btn">Lire</button>
-                       </div>
-                       <div class="listen">
-                           <i class="fas fa-assistive-listening-systems"></i> <br>
-                           <button id="listenMode" class="btn">Ecouter</button>
-                       </div>
-                   </div>
-                   <div class="settingsCheckbox">
-                       <div class="bgmusic">
-                           <input type="checkbox" id="bgMusic" name="bgMusic">
-                           <label for="bgMusic">Musique de fond</label>
-                           <audio id="myMusic" src="@/assets/audio/backsong.mp3" loop=""></audio>
-                       </div>
-                       <div class="fullScreen">
-                           <input type="checkbox" id="fullScreen" name="fullScreen">
-                           <label for="fullScreen">Plein ecran</label>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <div class="settings flex">
-                       <div class="volume">
-                           <input type="range" min="0" max="100" value="50" class="volume-range">
-                           <div class="icon">
-                               <i class="fa fa-volume-up icon-size" aria-hidden="true"></i>
-                           </div>
-                           <div class="bar-hoverbox">
-                               <div class="bar">
-                                   <div class="bar-fill"></div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="openPanel">
-                       <i class="fas fa-cogs"></i>
-                       </div>
-                   </div>
-  </div>
 
     <settings-card></settings-card>
     <navigation-bar></navigation-bar>
@@ -94,84 +49,13 @@
 
 <script>
 import NavigationBar from './components/NavigationBar.vue'
-import $ from 'jquery'
+
 
 export default {
   components: {
      NavigationBar
    },    
-    mounted () {
-      this.$nextTick(() => {
-       $("#bgMusic").click(function () {
-        if ($(this).prop("checked") == true) {
-            alert("La musique va se lanncer.");
-            $("#myMusic")[0].play();
-        } else if ($(this).prop("checked") == false) {
-            alert("La musique de fond va se mettre en pause");
-            $("#myMusic")[0].pause();
-        }
-    });
-         $("#fullScreen").click(function () {
-        document.fullScreenElement && null !== document.fullScreenElement || !document.mozFullScreen && !document.webkitIsFullScreen ? document.documentElement.requestFullScreen ? document.documentElement.requestFullScreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullScreen && document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen && document.webkitCancelFullScreen()
-    });
-     $("#readMode").on('click', function () {
-        // Suppression des classes si elles existent
-
-        $(".panel").removeClass("block");
-        $("#header").removeClass("none");
-        $(".Container").removeClass("none");
-
-        // ajout des classes si elles existent
-
-        $(".panel").addClass("none");
-        $("#header").addClass("block");
-        $(".Container").addClass("block");
-
-
-    });
-    $(".openPanel").on('click', function () {
-        // Suppression des classes si elles existent
-
-        $(".panel").removeClass("none");
-
-        // ajout des classes si elles existent
-        $("#header").addClass("none");
-
-
-    });
-    $("#listenMode").on('click', function () {
-        // Suppression des classes si elles existent
-
-        $(".panel").removeClass("block");
-        $("#header").removeClass("none");
-        $(".Container").removeClass("none");
-
-        // ajout des classes si elles existent
-
-        $(".panel").addClass("none");
-        $("#header").addClass("block");
-        $(".Container").addClass("block");
-
-
-    });
-
-    $("#watchMode").on('click', function () {
-        // Suppression des classes si elles existent
-
-        $(".panel").removeClass("block");
-        $("#header").removeClass("none");
-        $(".Container").removeClass("none");
-
-        // ajout des classes si elles existent
-
-        $(".panel").addClass("none");
-        $("#header").addClass("block");
-        $(".Container").addClass("block");
-
-
-    });
-      })
-  },
+   
      methods: {
     playSound (sound) {
       if(sound) {

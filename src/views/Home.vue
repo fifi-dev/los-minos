@@ -1,11 +1,52 @@
 <template>
   <div class="home">
-    <div>
-        <h1 v-show="elementVisible" class="hideElement"> Vous allez decouvrir une histoire peu raconté </h1>
+  <!--    <div>
+       <h1 v-show="elementVisible" class="hideElement"> Vous allez decouvrir une histoire peu raconté </h1>
         <h1 v-show="elementVisible2" class="hideElement"> Une histoire de combattantes </h1>
         <h1 v-show="elementVisibl3" class="hideElement"> Mais surtout une histoire de femme... </h1>
         <h1 v-show="elementVisible4" class="hideElement"> Prenez votre thé et montez le son... </h1>
-    </div>
+    </div> -->
+    <div class="settings-card" v-if="$route.meta.header === 1">
+    <div class="panel" >
+               <div class="popup">
+                   <h1>Quelle experience souhaitez-vous ?</h1>
+                   <div class="info">Pour vous offrir la meilleure experience possible, merci de cocher les cases en bas avant de choisir un mode</div>
+                   <div class="mode">
+                       <div class="read">
+                           <i class="fas fa-book"></i><br>
+                           <button id="readMode" class="btn">Découvrir</button>
+                       </div>
+                   </div>
+                   <div class="settingsCheckbox">
+                       <div class="bgmusic">
+                           <input type="checkbox" id="bgMusic" name="bgMusic">
+                           <label for="bgMusic">Musique de fond</label>
+                           <audio id="myMusic" src="@/assets/audio/backsong.mp3" loop=""></audio>
+                       </div>
+                       <div class="fullScreen">
+                           <input type="checkbox" id="fullScreen" name="fullScreen">
+                           <label for="fullScreen">Plein ecran</label>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="settings flex">
+                       <div class="volume">
+                           <input type="range" min="0" max="100" value="50" class="volume-range">
+                           <div class="icon">
+                               <i class="fa fa-volume-up icon-size" aria-hidden="true"></i>
+                           </div>
+                           <div class="bar-hoverbox">
+                               <div class="bar">
+                                   <div class="bar-fill"></div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="openPanel">
+                       <i class="fas fa-cogs"></i>
+                       </div>
+                   </div>
+  </div>
            <div class="Container none">
              <settings-card></settings-card>
                <!-- Première section-->
@@ -39,9 +80,11 @@ import FourthSection from '../components/FourthSection'
 import ThirdSection from '../components/ThirdSection'
 import SecondSection from '../components/SecondSection'
 import FirstSection from '../components/FirstSection'
+import $ from 'jquery'
 
 export default {
   name: "Home",
+  
   data() {
             return {
                 elementVisible: false,
@@ -49,6 +92,111 @@ export default {
                 //showContent: false,
             }
         },
+         mounted () {
+      this.$nextTick(() => {
+       $("#bgMusic").click(function () {
+        if ($(this).prop("checked") == true) {
+            alert("La musique va se lanncer.");
+            $("#myMusic")[0].play();
+        } else if ($(this).prop("checked") == false) {
+            alert("La musique de fond va se mettre en pause");
+            $("#myMusic")[0].pause();
+        }
+    });
+         $("#fullScreen").click(function () {
+        document.fullScreenElement && null !== document.fullScreenElement || !document.mozFullScreen && !document.webkitIsFullScreen ? document.documentElement.requestFullScreen ? document.documentElement.requestFullScreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullScreen && document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen && document.webkitCancelFullScreen()
+    });
+     $("#readMode").on('click', function () {
+        // Suppression des classes si elles existent
+
+        $(".panel").removeClass("block");
+        $("#header").removeClass("none");
+        $(".Container").removeClass("none");
+
+        // ajout des classes si elles existent
+
+        $(".panel").addClass("none");
+        $("#header").addClass("block");
+        $(".Container").addClass("block");
+
+
+    });
+    $(".openPanel").on('click', function () {
+        // Suppression des classes si elles existent
+
+        $(".panel").removeClass("none");
+
+        // ajout des classes si elles existent
+        $("#header").addClass("none");
+
+
+    });
+    $("#listenMode").on('click', function () {
+        // Suppression des classes si elles existent
+
+        $(".panel").removeClass("block");
+        $("#header").removeClass("none");
+        $(".Container").removeClass("none");
+
+        // ajout des classes si elles existent
+
+        $(".panel").addClass("none");
+        $("#header").addClass("block");
+        $(".Container").addClass("block");
+
+
+    });
+
+    $("#btn1").on('click', function(){
+    $('#section2').fadeIn(500);
+     $('#section1').fadeOut();
+    });
+
+    $("#btn2").on('click', function(){
+    $('.section3').fadeIn(500);
+     $('#section2').fadeOut();
+    });
+
+    $("#btn3").on('click', function(){
+    $('#section4').fadeIn();
+     $('.section3').fadeOut();
+    });
+
+    $("#btn4").on('click', function(){
+    $('#section5').fadeIn(500);
+     $('#section4').fadeOut();
+    });
+
+    $("#btn5").on('click', function(){
+    $('#section6').fadeIn(500);
+     $('#section5').fadeOut();
+    });
+
+    $("#btn6").on('click', function(){
+    $('#section7').fadeIn(500);
+     $('#section6').fadeOut();
+    });
+
+
+
+
+    $("#watchMode").on('click', function () {
+        // Suppression des classes si elles existent
+
+        $(".panel").removeClass("block");
+        $("#header").removeClass("none");
+        $(".Container").removeClass("none");
+
+        // ajout des classes si elles existent
+
+        $(".panel").addClass("none");
+        $("#header").addClass("block");
+        $(".Container").addClass("block");
+
+
+    });
+      })
+  },
   components: {
    // SettingsCard,
 //   Swiper,
@@ -80,6 +228,20 @@ body {
     color: white;
     scroll-behavior: smooth;
 }
+
+.section {
+    height: 100vh;
+    overflow: hidden;
+    margin: 10vh auto;
+}
+
+
+.section p {
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
 
 ::-webkit-scrollbar {
     width: 20px;

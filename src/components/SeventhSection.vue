@@ -46,4 +46,8 @@
 .listen {
     margin: auto 0px;
 }
+
+#section7{
+    display: none;
+}
 </style>

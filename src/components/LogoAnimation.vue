@@ -18,6 +18,7 @@
 
 <script>
 import CircleButton from './CircleButton.vue';
+import $ from 'jquery'
 export default {
   name: "logo_animation",
   components: {
@@ -35,6 +36,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.panel {
+   display: none;
+}
 .typewriter {
     width: 600px;
     margin: auto;

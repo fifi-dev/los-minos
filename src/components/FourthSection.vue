@@ -14,7 +14,7 @@
                    </div>
                        
                    </div>
-                   <a class="button" href="#section5"><navigate-btn id="btn4"></navigate-btn></a>
+                   <a class="button" id="btn4" href="#"><navigate-btn></navigate-btn></a>
                </article>
     </div>
 </template>
@@ -31,40 +31,29 @@ export default {
   components: {
     NavigateBtn
   },
-
 };
 </script>
 
 <style scoped>
 
-.section {
-    height: 100vh;
-    overflow: hidden;
-    margin-bottom: 20vh;
-
-}
 
 .section p {
     font-size: 25px;
     text-align: center;
     font-family: 'Indie Flower', cursive;
 }
-
 .portaitImg {
     width: 450px;
     margin-top: 45px;
 }
-
 #section4 .button {
     position: absolute;
     left: 0;
 }
-
 .rightSide {
     margin-top: 70px;
     text-align: center;
 }
-
 .rightSide img {
     margin: 30px 0;
 }

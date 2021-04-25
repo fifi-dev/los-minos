@@ -1,9 +1,9 @@
 <template>
     <div class="first-section">
-     <article class="section flex">
+     <article id="section1" class="section flex">
          <div class="margin">
          <h1>Les Amazones du Dahomey</h1>
-            <a class="button" href="#section2"><navigate-btn></navigate-btn ></a>
+            <a class="button" id="btn1" href="#section2"><navigate-btn></navigate-btn ></a>
          </div>
          <div class="boxContain">
                <div class="item">
@@ -33,14 +33,6 @@ export default {
 
 <style scoped>
 
-.section {
-    height: 100vh;
-    overflow: hidden;
-    margin: 10vh auto;
-    
-
-}
-
 .margin{
     margin-left: 10vw;
 }
@@ -68,7 +60,7 @@ h1{
 }
 
 .item{
-    width: 450px;
+    width: 500px;
 }
 
 </style>
