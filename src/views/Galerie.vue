@@ -295,8 +295,8 @@ i.arrow {
   .wrapper{
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         justify-content: space-between;
-        background-color: aqua;
         margin: 50px auto 0;
   }
 
@@ -306,7 +306,6 @@ i.arrow {
 
   .wrapper{
         flex-direction: column;
-        background-color: rgb(119, 0, 255);
   }
 
 }
