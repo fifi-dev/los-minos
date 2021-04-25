@@ -3,6 +3,11 @@
     <!-- septième section-->
                <article class="section flex" id="section7">
                    <p>De plus elle étaient conditionnées a des rituels magicoreligieux qui permettaient à solidifier l’esprit de guerrière.</p>
+                   <div class="listen" >
+                       <!-- @click.prevent="playSound('@/assets/audio/section2.mp3')" -->
+                       <button id="listenBtn2"><i class="fas fa-assistive-listening-systems"></i></button>
+                    <audio id="audio2" src="@/assets/audio/section2.mp3"></audio>
+                   </div>
                    <div class="ritualsImg">
                        <img src="@/assets/img/rituals_people.png" alt="people doing rituals">
                    </div>

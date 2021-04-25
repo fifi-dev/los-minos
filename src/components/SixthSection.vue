@@ -4,6 +4,11 @@
      <article class="section" id="section6">
                    <p>En service un jour sur deux, les guerrières subissent un
                        entrainement physique quotidien très dur.</p>
+                       <div class="listen" >
+                       <!-- @click.prevent="playSound('@/assets/audio/section2.mp3')" -->
+                       <button id="listenBtn2"><i class="fas fa-assistive-listening-systems"></i></button>
+                    <audio id="audio2" src="@/assets/audio/section2.mp3"></audio>
+                   </div>
                      <div class="carrousel">
 	<div class="card" id="c0">h</div>
 	<div class="card" id="c1"></div>
