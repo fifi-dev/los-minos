@@ -7,6 +7,7 @@
 <script type="module">
 import * as THREE from "three";
 const scene = new THREE.Scene();
+
 const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
@@ -17,13 +18,14 @@ const camera = new THREE.PerspectiveCamera(
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
-
+const controls = new OrbitControls( camera, renderer.domElement );
 const geometry = new THREE.SphereGeometry(10, 10, 10);
 const material = new THREE.MeshNormalMaterial({ wireframe: true });
 const sphere = new THREE.Mesh(geometry, material);
 scene.add(sphere);
 
 camera.position.z = 5;
+controls.update();
 // camera.position.z = 70;
 
 const animate = function () {
@@ -31,8 +33,9 @@ const animate = function () {
 
   sphere.rotation.x += 0.003;
   sphere.rotation.y += 0.003;
-
+    controls.update();
   renderer.render(scene, camera);
+  
 };
 
 animate();
