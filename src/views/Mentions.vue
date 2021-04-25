@@ -40,12 +40,11 @@
           <p>@ AG STUDIO - 2020</p>
 
       </div>
-  </div>
 
   </div>
 </template>
 
-<style>
+<style scoped>
 /* width */
 ::-webkit-scrollbar {
     width: 20px;
@@ -70,7 +69,6 @@
     background: #a58763;
 }
 
-
 h1{
 	text-align: center;
     padding-top: 50px;
@@ -88,8 +86,12 @@ h1{
 
 
 .petitediv{
-
 	margin-top: 20px;
+}
+
+.boite{
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .boite h2{

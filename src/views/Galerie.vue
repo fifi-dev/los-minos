@@ -146,13 +146,14 @@ h1 {
 
 .wrapper {
     /*grande div */
-    display: -webkit-box;
-    display: -ms-flexbox;
+    /* display: -webkit-box;
+    display: -ms-flexbox; */
     display: flex;
-    -ms-flex-wrap: wrap;
+    /* -ms-flex-wrap: wrap; */
     flex-wrap: wrap;
-    max-width: 90%;
+    /* max-width: 90%; */
     margin: 20px auto 0;
+    justify-content: space-between;
 }
 
 .box {
@@ -287,6 +288,27 @@ i.arrow {
         opacity: 0;
         display: none;
     }
+}
+
+@media(min-width: 768px) and (max-width: 1388px) {
+
+  .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: aqua;
+        margin: 50px auto 0;
+  }
+
+}
+
+@media(max-width: 767px) {
+
+  .wrapper{
+        flex-direction: column;
+        background-color: rgb(119, 0, 255);
+  }
+
 }
 
 

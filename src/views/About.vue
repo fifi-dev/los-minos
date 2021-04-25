@@ -16,7 +16,7 @@
                <section id="descriptions">
                    <section>
                        <div class="description_perso">
-                           <div class="img"><img src="@/assets/img/eole.png" alt=""></div>
+                           <div class="img"><img src="@/assets/img/eole.png" alt="photo_eole"></div>
                            <div class="nom_description">
                                <h3>Eole GAUTHE</h3>
                                <p>Eole est capvierdienne béninoise française . Née en France, elle vécu 18 ans au Bénin,
@@ -25,7 +25,7 @@
                            </div>
                        </div>
                        <div class="description_perso">
-                           <div class="img"><img src="@/assets/img/coco.png" alt=""></div>
+                           <div class="img"><img src="@/assets/img/coco.png" alt="photo_coralie"></div>
                            <div class="nom_description">
                                <h3>Coralie OUEDRAOGO</h3>
                                <p>Coralie est Burkinabè mais a étudiée durant 7 années au Bénin. Elle a pu y bénéficier d'une formation militaire. Grace à cette formation,
@@ -34,10 +34,8 @@
                                    celui militaire pour se spécialiser en dévellopement web avec pour ambition d'un jour avoir sa propre entreprise.</p>
                            </div>
                        </div>
-                   </section>
-                   <section>
                        <div class="description_perso">
-                           <div class="img"><img src="@/assets/img/fifi.png" alt=""></div>
+                           <div class="img"><img src="@/assets/img/fifi.png" alt="photo_fideline"></div>
                            <div class="nom_description">
                                <h3>Fideline BAZANA</h3>
                                <p>Curieuse et prévoyante. Au collège, Fideline avait déjà fait une liste des métiers souhaitait faire de l’ingénieur aéronautique
@@ -47,7 +45,7 @@
                            </div>
                        </div>
                        <div class="description_perso">
-                           <div class="img"><img src="@/assets/img/dona.png" alt=""></div>
+                           <div class="img"><img src="@/assets/img/dona.png" alt="photo_dona"></div>
                            <div class="nom_description">
                                <h3>Dona DENKEY DANDJEIN</h3>
                                <p>Dona est une jeune étudiante de 18 ans. Née en France, elle est d'origine Camerounaise et Togolaise.
@@ -65,79 +63,137 @@
 </template>
 <style scoped>
 
- h2{
+h2{
     text-align: center;
 }
+
 h3{
     color: #bb9a73;
     margin-left: 20px;
 }
+
 h1{
     color: white;
     padding-top: 30px;
     text-decoration: underline white;
 }
+
 h1, #Notre_projet h2{
     padding-bottom: 15px;
 }
-#Notre_projet {
-    height: 55vh;
-    color: white;
-}
+
 .about{
-   margin-left: 5%;
-   margin-right: 5%;
-   font-family: Poppins;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: Poppins;
 }
+
 #nous{
-    height: 115vh;
+    min-height: 115vh;
     padding-top: 50px;
 }
+
 #nous h2{
     margin-bottom: 25px;
     color: white;
 }
+
 #descriptions{
-    width: 95%;
     display: flex;
 }
+
+#descriptions section{
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .description_perso{
-    padding-bottom: 50px;
     display: flex;
-    margin-left: 30px;
-    margin-top: 10px;
+    width: 600px;
+    align-items: center;
+    margin-bottom: 50px;
 }
+
 .description_perso p{
     color: white;
-    height: 25vh;
     text-align: left;
     padding-left: 20px;
     margin-top: 10px;
 }
-.description_perso img{
-  height: 20vh;
+
+.img{
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    align-content: center;
 }
+
 .nom_description{
-    width: 75%;
-    margin-left: 15px;
+    width: 500px;
 }
+
 #black{
     background-color: black;
 }
+
 #Notre_projet{
     padding-top: 60px;
     text-align: center;
-    height: 40vh;
+    color: white;
 }
+
 #Notre_projet p{
     text-align: center;
-    width: 50%;
+    max-width: 50%;
     margin: 0 auto;
 }
+
 footer{
     text-align: center
 }
+
+
+@media(min-width: 768px) and (max-width: 1388px) {
+
+}
+
+
+
+@media(max-width: 767px) {
+
+#descriptions{
+    flex-direction: column;
+    justify-content: center;
+}
+
+#descriptions section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description_perso{
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 120px;
+}
+
+.description_perso p{
+    text-align: center;
+    padding-left: 0px;
+}
+
 .img{
-    padding-top: 47px;
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    align-content: center;
+}
+.nom_description{
+    width: 400px;
+}
+
 }
 </style>
