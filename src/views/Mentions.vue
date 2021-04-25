@@ -40,7 +40,7 @@
           <p>@ AG STUDIO - 2020</p>
 
       </div>
-
+  </div>
   </div>
   </div>
 </template>
@@ -80,7 +80,7 @@ h1{
 }
 
 .LADIV ul{
-    margin-left: 25px;
+    /* margin-left: 25px; */
     margin-top: 10px;
     list-style: none;
 }
@@ -102,10 +102,10 @@ h1{
 .boite{
     
     margin: 15px;
-    padding: 15px 50px;
+    padding: 15px auto;
 }
 .boite p{
-    padding: 0px 200px;
+    padding: 0px 20px;
 }
 .mentions{
     color: rgb(240, 236, 236);
