@@ -2,12 +2,16 @@
     <div class="first-section">
      <article class="section">
          <div class="boxContain">
+              <div class="item">
+              <img src="@/assets/img/ama.svg" alt="portrait amazone">
+        </div> 
              <h1>Les Amazones du Dahomey</h1>
-                   <a class="button" href="#section2"><navigate-btn></navigate-btn ></a>
+            <a class="button" href="#section2"><navigate-btn></navigate-btn ></a>
          </div>
-          <div class="items">
-              
-              </div>         
+          <div class="item">
+              <img src="@/assets/img/globe.svg" alt="globe africa">
+        </div> 
+                 
     </article>
     </div>
 </template>
@@ -60,5 +64,8 @@ h1{
     padding-top: 10vh;
 }
 
+.item{
+    width: 200px;
+}
 
 </style>
