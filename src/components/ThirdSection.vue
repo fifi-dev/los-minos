@@ -45,14 +45,12 @@ export default {
     width: 40px;
 }
 
-/*
 
 .section3{
-    display: none;
     width: 80vw;
     margin: 0 auto;
 }
- */
+
 
 .imgC{
     width: 50vw;
