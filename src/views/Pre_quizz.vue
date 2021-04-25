@@ -14,7 +14,7 @@
         <span>"Les femmes soldats du Dahomey" </span>?
       </h1>
 
-      <div id="begin"><a href="/quizz">Commencer !</a></div>
+      <div id="begin"><a href="/quizz.html">Commencer !</a></div>
 
       <div id="img_quiz">
         <img src="@/assets/img/quiz.jpg" alt="les_amazones" />
