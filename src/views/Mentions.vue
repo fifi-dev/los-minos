@@ -1,6 +1,12 @@
 <template>
   <div class="mentions">
-          <h1>Mentions Légales</h1>
+
+  <div>
+      <header id="header" class="header none">
+          <!-- nav-->
+         
+      </header>
+      <h1>Mentions Légales</h1>
 
       <div class="LADIV">
           <div class="boite">
@@ -34,6 +40,8 @@
           <p>@ AG STUDIO - 2020</p>
 
       </div>
+
+  </div>
   </div>
 </template>
 
@@ -62,30 +70,23 @@
     background: #a58763;
 }
 
-.mentions{
-  color: white;
-}
-
 h1{
 	text-align: center;
     padding-top: 50px;
 }
 
 .LADIV{
-  text-align: left;
-	margin-left: 100px;
-	margin-right: 200px;
-	margin-top: 50px;
+	padding: 50px;
 }
 
 .LADIV ul{
     margin-left: 25px;
     margin-top: 10px;
+    list-style: none;
 }
 
 
 .petitediv{
-	text-align: center;
 	margin-top: 20px;
 }
 
@@ -94,15 +95,20 @@ h1{
     margin-bottom: 15px;
 }
 
-@media(max-width: 767px) {
-
+.boite h2{
+    
+   padding-bottom: 20px;
+}
+.boite{
+    
+    margin: 15px;
+    padding: 15px 50px;
+}
+.boite p{
+    padding: 0px 200px;
+}
 .mentions{
-  background-color: teal;
+    color: rgb(240, 236, 236);
 }
 
-/* .boite ul{
-  
-} */
-
-}
 </style>
