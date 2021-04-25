@@ -1,17 +1,15 @@
 <template>
     <div class="first-section">
-     <article class="section">
-         <div class="boxContain">
-              <div class="item">
-              <img src="@/assets/img/ama.svg" alt="portrait amazone">
-        </div> 
-             <h1>Les Amazones du Dahomey</h1>
+     <article class="section flex">
+         <div class="margin">
+         <h1>Les Amazones du Dahomey</h1>
             <a class="button" href="#section2"><navigate-btn></navigate-btn ></a>
          </div>
-          <div class="item">
-              <img src="@/assets/img/globe.svg" alt="globe africa">
+         <div class="boxContain">
+               <div class="item">
+              <img src="@/assets/img/ama.svg" alt="portrait amazone">
         </div> 
-                 
+         </div>  
     </article>
     </div>
 </template>
@@ -38,12 +36,13 @@ export default {
 .section {
     height: 100vh;
     overflow: hidden;
-    margin-bottom: 20vh;
+    margin: 10vh auto;
+    
 
 }
 
-.boxContain{
-    position: relative;
+.margin{
+    margin-left: 10vw;
 }
 
 .button {
@@ -60,12 +59,16 @@ export default {
 
 h1{
     font-family: 'Indie Flower', cursive;
-    font-size: 64px;
-    padding-top: 10vh;
+    font-size: 60px;
+    padding-top: 25vh;
+}
+
+.boxContain{
+    margin: 0 auto;
 }
 
 .item{
-    width: 200px;
+    width: 450px;
 }
 
 </style>
