@@ -114,6 +114,7 @@ body {
     color: #fff;
 }
 
+:-webkit-scrollbar {display:none;}
 /* width */
 ::-webkit-scrollbar {
     width: 20px;
@@ -137,6 +138,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #a58763;
 }
+
 
 h1 {
     font-family: 'Courgette', cursive;

@@ -11,45 +11,29 @@
                <div class="popup">
                    
                    <h1>Quelle experience souhaitez-vous ?</h1>
-                   <div class="info">Pour vous offrir la meilleure experience possible, merci de cocher les cases en bas avant de choisir un mode</div>
+                   <div class="info">Pour vous offrir la meilleure experience possible, Veulliez lire les indications suivantes</div>
                    <div class="mode">
                        <div class="read">
                            <i class="fas fa-book"></i><br>
-                           <button id="readMode" class="btn">Découvrir</button>
+                           <button id="readMode" class="btn">Déouvrir l'histoire</button>
                        </div>
                    </div>
                    <div class="settingsCheckbox">
                        <div class="bgmusic">
-                           <input type="checkbox" id="bgMusic" name="bgMusic">
-                           <label for="bgMusic">Musique de fond</label>
+                           <input type="checkbox">
+                           <label for="bgMusic"> Mettre en pause la musique</label>
                         <!--   <audio id="myMusic" src="@/assets/audio/backsong.mp3" loop="" autoplay></audio> -->
                        </div>
-                       <div class="fullScreen">
-                           <input type="checkbox" id="fullScreen" name="fullScreen">
-                           <label for="fullScreen">Plein ecran</label>
+                       <div class="full-screen" >
+                           <i class="fas fa-expand"></i>
+                           <p> Mettre en plein écran </p>
                        </div>
                    </div>
                </div>
            </div>
-           <div class="settings flex">
-                       <div class="volume">
-                           <input type="range" min="0" max="100" value="50" class="volume-range">
-                           <div class="icon">
-                               <i class="fa fa-volume-up icon-size" aria-hidden="true"></i>
-                           </div>
-                           <div class="bar-hoverbox">
-                               <div class="bar">
-                                   <div class="bar-fill"></div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="openPanel">
-                       <i class="fas fa-cogs"></i>
-                       </div>
-                   </div>
+           
   </div>
            <div class="Container none">
-             <settings-card></settings-card>
                <!-- Première section-->
                <first-section></first-section>
                <!-- Deuxième section-->
@@ -95,15 +79,6 @@ export default {
         },
          mounted () {
       this.$nextTick(() => {
-       $("#bgMusic").click(function () {
-        if ($(this).prop("checked") == true) {
-            alert("La musique va se lanncer.");
-            $("#myMusic")[0].play();
-        } else if ($(this).prop("checked") == false) {
-            alert("La musique de fond va se mettre en pause");
-            $("#myMusic")[0].pause();
-        }
-    });
          $("#fullScreen").click(function () {
         document.fullScreenElement && null !== document.fullScreenElement || !document.mozFullScreen && !document.webkitIsFullScreen ? document.documentElement.requestFullScreen ? document.documentElement.requestFullScreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullScreen && document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen && document.webkitCancelFullScreen()
     });
@@ -120,7 +95,6 @@ export default {
         $("#header").addClass("block");
         $(".Container").addClass("block");
 
-
     });
     $(".openPanel").on('click', function () {
         // Suppression des classes si elles existent
@@ -129,7 +103,6 @@ export default {
 
         // ajout des classes si elles existent
         $("#header").addClass("none");
-
 
     });
     $("#listenMode").on('click', function () {
@@ -148,11 +121,12 @@ export default {
 
     });
 
-    /*
+
 
     $("#btn1").on('click', function(){
     $('#section2').fadeIn(500);
      $('#section1').fadeOut();
+     $("#btn2").fadeIn(2000);
     });
 
     $("#btn2").on('click', function(){
@@ -161,6 +135,7 @@ export default {
     });
 
     $("#btn3").on('click', function(){
+    $("#section4").removeClass("none");
     $('#section4').fadeIn();
      $('.section3').fadeOut();
     });
@@ -176,11 +151,28 @@ export default {
     });
 
     $("#btn6").on('click', function(){
+    $("#section7").removeClass("none");
     $('#section7').fadeIn(500);
      $('#section6').fadeOut();
     });
-*/
 
+    $("#btn7").on('click', function(){
+    $("#section1").fadeIn("none");
+    $("#section7").fadeOut("none");
+    });
+
+
+$("#slider").slider({
+value : 75,
+step  : 1,
+range : 'min',
+min   : 0,
+max   : 100,
+slide : function(){
+    var value = $("#slider").slider("value");
+    $("#myMusic").volume = (value / 100);
+}
+});
 
 
     $("#watchMode").on('click', function () {
@@ -225,11 +217,9 @@ export default {
 
 <style scoped>
 body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
     scroll-behavior: smooth;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .section {
@@ -250,24 +240,26 @@ body {
 ::-webkit-scrollbar {
     width: 20px;
     background: black;
-    display: none;
 }
 /* Track */
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px;
     border-radius: 10px;
     background: black;
+    display: none;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #bb9a73;
     border-radius: 10px;
+    display: none;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #a58763;
+    display: none;
 }
 
 
@@ -289,8 +281,26 @@ body {
 
 }
 
+.full-screen{
+    display: flex;
+    color: white;
+    margin-left: 30px;
+}
+
+.full-screen p{
+    margin-left: 5px;
+}
+
+.popup{
+    color:white;
+}
+
 .button {
     width: 40px;
+}
+
+.spaceBetween{
+   margin-bottom: 5vh;
 }
 
 </style>

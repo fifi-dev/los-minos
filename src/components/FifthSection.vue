@@ -8,8 +8,8 @@
                    <p>Éduquées au combat, elles vouent leur vie entière à la défense du roi et de son royaume.</p>
                    <div class="listen" >
                        <!-- @click.prevent="playSound('@/assets/audio/section2.mp3')" -->
-                       <button id="listenBtn2"><i class="fas fa-assistive-listening-systems"></i></button>
-                    <audio id="audio2" src="@/assets/audio/section2.mp3"></audio>
+                       <button id="listenBtn4"><i class="fas fa-assistive-listening-systems"></i></button>
+                    <audio id="audio2" src="@/assets/audio/section5.mp3"></audio>
                    </div>
                    <a class="button" id="btn5" href="#"><navigate-btn v-show="BtnVisible"></navigate-btn ></a>
                </article>
@@ -39,17 +39,7 @@ export default {
 <style scoped>
 
 .section {
-    height: 100vh;
-    overflow: hidden;
-     margin: 10vh auto;
-    margin-bottom: 20vh;
-
-}
-
-.section {
-    height: 100vh;
-    overflow: hidden;
-    margin-bottom: 20vh;
+     margin: auto;
 
 }
 
