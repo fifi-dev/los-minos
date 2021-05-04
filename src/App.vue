@@ -5,7 +5,6 @@
       <router-link to="/about">About</router-link>
     </div> -->
     <div class="header" v-if="$route.meta.header === 1">
-      
     <input type="checkbox" id="check">
     <label for="check" class="open" id="black"><i class="fas fa-bars"></i></label>
     <nav>
@@ -41,8 +40,18 @@
     </ul>
       </nav>
    </div>
-    
+   <transition
+   mode="out-in"
+   enter-active-class="animate__animated animate__fadeIn"
+   leave-active-class="animate__animated animate__fadeOut"
+   >
     <router-view />
+    </transition>
+	
+
+    <audio id="myMusic" src="@/assets/audio/backsong.mp3" loop="" autoplay></audio>
+    
+
   </div>
 </template>
 
@@ -52,11 +61,46 @@ import NavigationBar from './components/NavigationBar.vue'
 
 
 export default {
+    
+data() {
+      return {
+          isOff: false
+      }
+    },
+
   components: {
      NavigationBar
-   },    
+   }, 
+   
+   
+mounted() {
+        // Automatically play music effects, solve the WeChat automatic playback problem
+       document.addEventListener('touchstart',this.audioAutoPlay,false);
+       document.addEventListener('WeixinJSBridgeReady', this.audioAutoPlay,false);
+       let oAudio = document.querySelector("#audio");
+                 oAudio.onended = function () {//play is finished, replay loop
+            oAudio.load();
+            oAudio.play();
+        }
+    },
    
      methods: {
+         changeOn(){
+                let oAudio = document.querySelector("#audio");
+               if(this.isOff){
+                                 oAudio.play();//Let the audio file start playing     
+               }else{
+                                 oAudio.pause();//Make the audio file pause 
+               }
+               this.isOff = !this.isOff;
+           },
+           audioAutoPlay() {
+                let audio = document.getElementById('audio');
+                    this.isOff = false;
+                    audio.play();
+                document.removeEventListener('touchstart',this.audioAutoPlay);
+            },
+
     playSound (sound) {
       if(sound) {
         var audio = new Audio(sound);
@@ -349,6 +393,38 @@ nav ul li a:hover::after{
     font-family: 'Indie Flower', cursive;
     color: white;
 }
+
+.isOn{
+    width: 28px;
+    height: 28px;
+    position: fixed;
+    z-index: 2000;
+    top: 20px;
+    left: 20px;
+     -webkit-animation: rotating 1.2s linear infinite;
+    animation: rotating 1.2s linear infinite;
+    background: url("/assets/img/globe.svg") 0 0 no-repeat;
+    background-size:100%; 
+}
+@keyframes rotating {
+    from { -webkit-transform: rotate(0) }
+    to { -webkit-transform: rotate(360deg) }
+ }
+@-webkit-keyframes rotating {
+    from { -webkit-transform: rotate(0) }
+    to { -webkit-transform: rotate(360deg) }
+ }
+.isOff{
+    width: 28px;
+    height: 28px;
+    position: fixed;
+    z-index: 2000;
+    top: 20px;
+    left: 20px;
+    background: url("/assets/img/ama.svg") 0 -28px no-repeat;
+    background-size:100%; 
+}
+
 
 
 </style>

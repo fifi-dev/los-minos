@@ -1,7 +1,6 @@
 <template>
-  <div class="galerie">
+  <div class="Container galerie">
     <h1>Bienvenue dans la Galerie</h1>
-    <audio autoplay id="myMusic" src="audio/backsong.mp3" loop=""></audio>
     <div class="wrapper">
       <div class="box item-1">
         <img src="@/assets/img/1-amazones.jpg" alt="Photo de groupe d'amazones" />

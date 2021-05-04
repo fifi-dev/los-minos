@@ -9,6 +9,7 @@
     <div class="settings-card" v-if="$route.meta.header === 1">
     <div class="panel" >
                <div class="popup">
+                   
                    <h1>Quelle experience souhaitez-vous ?</h1>
                    <div class="info">Pour vous offrir la meilleure experience possible, merci de cocher les cases en bas avant de choisir un mode</div>
                    <div class="mode">
@@ -21,7 +22,7 @@
                        <div class="bgmusic">
                            <input type="checkbox" id="bgMusic" name="bgMusic">
                            <label for="bgMusic">Musique de fond</label>
-                           <audio id="myMusic" src="@/assets/audio/backsong.mp3" loop=""></audio>
+                        <!--   <audio id="myMusic" src="@/assets/audio/backsong.mp3" loop="" autoplay></audio> -->
                        </div>
                        <div class="fullScreen">
                            <input type="checkbox" id="fullScreen" name="fullScreen">
