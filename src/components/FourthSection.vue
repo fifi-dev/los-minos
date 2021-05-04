@@ -1,7 +1,7 @@
 <template>
     <div class="fourth-section">
         <!-- quatrième section-->
-               <article class="section flex" id="section4">
+               <article class="section flex none" id="section4">
                    <div class="portaitImg">
                        <img src="@/assets/img/ama_portrait.png" alt="portait d'une amazone du dahomey">
                    </div>
@@ -41,7 +41,6 @@ export default {
     overflow: hidden;
      margin: 10vh auto;
     margin-bottom: 20vh;
-
 }
 
 .section p {
@@ -64,4 +63,6 @@ export default {
 .rightSide img {
     margin: 30px 0;
 }
+
+
 </style>

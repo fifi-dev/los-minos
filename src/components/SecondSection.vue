@@ -57,11 +57,11 @@ export default {
     margin-bottom: 20vh;
 
 }
-/**
+
 #section2{
     display: none;
 }
- */
+ 
 
 .button {
     width: 40px;

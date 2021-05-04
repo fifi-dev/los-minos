@@ -1,19 +1,40 @@
 <template>
 <div class="seventh-section">
     <!-- septième section-->
-               <article class="section flex" id="section7">
-                   <p>De plus elle étaient conditionnées a des rituels magicoreligieux qui permettaient à solidifier l’esprit de guerrière. </p>
+               <article class="section flex none" id="section7">
+                       <p>De plus elle étaient conditionnées a des rituels magicoreligieux qui permettaient à solidifier l’esprit de guerrière. <br><a class="button" id="btn7" href="#"><navigate-btn></navigate-btn></a></p>
                    <div class="listen" >
                        <!-- @click.prevent="playSound('@/assets/audio/section2.mp3')" -->
-                       <button id="listenBtn2"><i class="fas fa-assistive-listening-systems"></i></button>
-                    <audio id="audio2" src="@/assets/audio/section2.mp3"></audio>
+                       <button id="listenBtn6"><i class="fas fa-assistive-listening-systems"></i></button>
+                    <audio id="audio2" src="@/assets/audio/section7.mp3"></audio>
                    </div>
                    <div class="ritualsImg">
                        <img src="@/assets/img/rituals_people.png" alt="people doing rituals">
                    </div>
                </article>
+               
                </div>
 </template>
+
+<script>
+import NavigateBtn from './NavigateBtn.vue';
+export default {
+    data() {
+            return {
+              //  BtnVisible: false,
+                //showContent: false,
+            }
+        },
+  components: {
+    NavigateBtn
+  },
+
+  created() {
+    //setTimeout(() => this.BtnVisible = true, 6000)
+},
+
+};
+</script>
 
 <style scoped>
 
@@ -28,7 +49,7 @@
 .section {
     height: 100vh;
     overflow: hidden;
-     margin: 10vh auto;
+     margin: 2vh auto;
     margin-bottom: 20vh;
 
 }
@@ -54,10 +75,5 @@
     margin: auto 0px;
 }
 
-/* 
-#section7{
-    display: none;
-}
 
-*/
 </style>

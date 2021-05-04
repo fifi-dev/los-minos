@@ -6,8 +6,8 @@
                        entrainement physique quotidien très dur.</p>
                        <div class="listen" >
                        <!-- @click.prevent="playSound('@/assets/audio/section2.mp3')" -->
-                       <button id="listenBtn2"><i class="fas fa-assistive-listening-systems"></i></button>
-                    <audio id="audio2" src="@/assets/audio/section2.mp3"></audio>
+                       <button id="listenBtn5"><i class="fas fa-assistive-listening-systems"></i></button>
+                    <audio id="audio2" src="@/assets/audio/section6.mp3"></audio>
                    </div>
                      <div class="carrousel">
 	<div class="card" id="c0"></div>
@@ -56,6 +56,10 @@ export default {
     overflow: hidden;
     margin-bottom: 20vh;
 
+}
+
+#section6{
+  display: none;
 }
 
 .section p {

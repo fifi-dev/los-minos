@@ -89,6 +89,7 @@ export default {
             $("#myMusic")[0].pause();
         }
     });
+
          $("#fullScreen").click(function () {
         document.fullScreenElement && null !== document.fullScreenElement || !document.mozFullScreen && !document.webkitIsFullScreen ? document.documentElement.requestFullScreen ? document.documentElement.requestFullScreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullScreen && document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen && document.webkitCancelFullScreen()
     });
@@ -105,7 +106,6 @@ export default {
         $("#header").addClass("block");
         $(".Container").addClass("block");
 
-
     });
     $(".openPanel").on('click', function () {
         // Suppression des classes si elles existent
@@ -114,7 +114,6 @@ export default {
 
         // ajout des classes si elles existent
         $("#header").addClass("none");
-
 
     });
     $("#listenMode").on('click', function () {
@@ -146,6 +145,7 @@ export default {
     });
 
     $("#btn3").on('click', function(){
+    $("#section4").removeClass("none");
     $('#section4').fadeIn();
      $('.section3').fadeOut();
     });
@@ -161,8 +161,18 @@ export default {
     });
 
     $("#btn6").on('click', function(){
+    $("#section7").removeClass("none");
     $('#section7').fadeIn(500);
      $('#section6').fadeOut();
+    });
+
+    $("#btn7").on('click', function(){
+    $("#section1").fadeIn("none");
+    $("#section2").fadeIn("none");
+    $("#section3").fadeIn("none");
+    $("#section4").fadeIn("none");
+    $("#section5").fadeIn("none");
+    $("#section7").fadeIn("none");
     });
 
 
