@@ -1,4 +1,5 @@
 <template>
+<div class="biographie">
 <div class="testbio">
     <section class="book">
 
@@ -25,7 +26,7 @@ Elle renonce ensuite à son titre de reine et sort de la pièce, à jamais.
 </ul>
 </section>
 </div>
-    
+</div>
 </template>
 
 <script>

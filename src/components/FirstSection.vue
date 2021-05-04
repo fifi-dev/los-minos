@@ -34,10 +34,8 @@ export default {
 <style scoped>
 
 .section {
-    height: 100vh;
-    overflow: hidden;
-     margin: 10vh auto;
-    margin-bottom: 20vh;
+     margin: 0px auto;
+     height: auto;
 
 }
 
@@ -68,7 +66,8 @@ h1{
 }
 
 .item{
-    width: 500px;
+    margin-top: 5vh;
+    width: 450px;
 }
 
 </style>

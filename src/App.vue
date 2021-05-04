@@ -21,6 +21,10 @@
 </nav>
     </div>
     <div class="settings flex">
+        <div class="bgmusic">
+                           <input type="checkbox" id="bgMusic" name="bgMusic" checked>
+                        <!--   <audio id="myMusic" src="@/assets/audio/backsong.mp3" loop="" autoplay></audio> -->
+                       </div>
                        <div class="volume-range">
                            <input type= "range" class = "slider" id = "slider" value = "20" maxlength ="100">
                        </div>
@@ -37,8 +41,8 @@
     </transition>
     
 <div class="audioC">
-                            <audio id="myMusic" class="myMusic" src="@/assets/audio/backsong.mp3" loop="" autoplay></audio>
-                       </div>
+ <audio id="myMusic" class="myMusic" src="@/assets/audio/backsong.mp3" loop="" autoplay></audio>
+</div>
   </div>
 </template>
 
@@ -60,6 +64,15 @@ data() {
    
    
 mounted() {
+    $("#bgMusic").click(function () {
+        if ($(this).prop("checked") == true) {
+            alert("La musique va se lanncer.");
+            $("#myMusic")[0].play();
+        } else if ($(this).prop("checked") == false) {
+            alert("La musique de fond va se mettre en pause");
+            $("#myMusic")[0].pause();
+        }
+    });
         $("#fullScreen").click(function () {
         document.fullScreenElement && null !== document.fullScreenElement || !document.mozFullScreen && !document.webkitIsFullScreen ? document.documentElement.requestFullScreen ? document.documentElement.requestFullScreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullScreen && document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen && document.webkitCancelFullScreen()
     });
@@ -114,10 +127,12 @@ slide : function(){
 @import './assets/css/animations.css';
 @import './assets/css/fonts.css';
 
+
 /* width */
 ::-webkit-scrollbar {
     width: 20px;
     background: black;
+
 }
 
 /* Track */
@@ -395,6 +410,10 @@ nav ul li a:hover::after{
 
 .volume-range{
     margin-right: 30px;
+}
+
+.bgmusic{
+    margin-right: 20px;
 }
 
 </style>

@@ -2,10 +2,12 @@
 <div class="seventh-section">
     <!-- septième section-->
                <article class="section flex none" id="section7">
-                       <p>De plus elle étaient conditionnées a des rituels magicoreligieux qui permettaient à solidifier l’esprit de guerrière. <br><a class="button" id="btn7" href="#"><navigate-btn></navigate-btn></a></p>
+                       <p>De plus elle étaient conditionnées a des rituels magicoreligieux qui permettaient à solidifier l’esprit de guerrière. <br>
+                        <button id="listenBtn6"><i class="fas fa-assistive-listening-systems"></i></button>
+                       <a class="button" id="btn7" href="#"><navigate-btn></navigate-btn></a>
+                       </p>
                    <div class="listen" >
                        <!-- @click.prevent="playSound('@/assets/audio/section2.mp3')" -->
-                       <button id="listenBtn6"><i class="fas fa-assistive-listening-systems"></i></button>
                     <audio id="audio2" src="@/assets/audio/section7.mp3"></audio>
                    </div>
                    <div class="ritualsImg">
@@ -39,18 +41,7 @@ export default {
 <style scoped>
 
 .section {
-    height: 100vh;
-    overflow: hidden;
-     margin: 10vh auto;
-    margin-bottom: 20vh;
-
-}
-
-.section {
-    height: 100vh;
-    overflow: hidden;
-     margin: 2vh auto;
-    margin-bottom: 20vh;
+    margin: auto;
 
 }
 
