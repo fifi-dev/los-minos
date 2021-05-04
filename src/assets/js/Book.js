@@ -10,9 +10,19 @@ section.appendChild( renderer.domElement );
 const ambient = new THREE.AmbientLight(0x222222)
 scene.add(ambient)
 
-const light = new THREE.DirectionalLight(0xffffff)
-light.position.set(0,0,6)
-scene.add(light)
+// const light = new THREE.DirectionalLight(0xffffff)
+// light.position.set(0,0,6)
+// scene.add(light)
+
+
+    // Create ambient light and add to scene.
+    var light = new THREE.AmbientLight(0x404040); // soft white light
+    scene.add(light);
+
+    // Create directional light and add to scene.
+    var directionalLight = new THREE.DirectionalLight(0xffffff);
+    directionalLight.position.set(1, 1, 1).normalize();
+    scene.add(directionalLight);
 
 
 
@@ -39,23 +49,23 @@ scene.add(light)
 //     })
 // })
 
-// const cubeMaterials = [
-//     new THREE.MeshLambertMaterial({map: new THREE.TextureLoader().load("../img/book/side.png"), side: THREE.DoubleSide}), //right
-//     new THREE.MeshLambertMaterial({map: new THREE.TextureLoader().load("../img/book/sidee.png"), side: THREE.DoubleSide}), //left
-//     new THREE.MeshLambertMaterial({map: new THREE.TextureLoader().load("../img/book/top.png"), side: THREE.DoubleSide}), //top
-//     new THREE.MeshLambertMaterial({map: new THREE.TextureLoader().load("../img/book/bottom.png"), side: THREE.DoubleSide}), // bottom
-//     new THREE.MeshLambertMaterial({map: new THREE.TextureLoader().load("../img/book/front.png"), side: THREE.DoubleSide}), //front
-//     new THREE.MeshLambertMaterial({map: new THREE.TextureLoader().load("../img/book/back.png"), side: THREE.DoubleSide}) //back
-// ];
-
 const cubeMaterials = [
-    new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load("../img/book/side.png"), side: THREE.DoubleSide } ),
-      new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } ),
-      new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } ),
-      new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } ),
-      new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } ),
-      new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } )
+    new THREE.MeshPhongMaterial({map: new THREE.CubeTextureLoader().load("../img/book/side.png"), side: THREE.DoubleSide}), //right
+    new THREE.MeshPhongMaterial({map: new THREE.CubeTextureLoader().load("../img/book/sidee.png"), side: THREE.DoubleSide}), //left
+    new THREE.MeshPhongMaterial({map: new THREE.CubeTextureLoader().load("../img/book/top.png"), side: THREE.DoubleSide}), //top
+    new THREE.MeshPhongMaterial({map: new THREE.CubeTextureLoader().load("../img/book/bottom.png"), side: THREE.DoubleSide}), // bottom
+    new THREE.MeshPhongMaterial({map: new THREE.CubeTextureLoader().load("../img/book/front.png"), side: THREE.DoubleSide}), //front
+    new THREE.MeshPhongMaterial({map: new THREE.CubeTextureLoader().load("../img/book/back.png"), side: THREE.DoubleSide}) //back
 ];
+
+// const cubeMaterials = [
+//     new THREE.MeshPhongMaterial( { map: new THREE.TextureLoader().load("../img/book/side.png"), side: THREE.DoubleSide } ),
+//       new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } ),
+//       new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } ),
+//       new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } ),
+//       new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } ),
+//       new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff } )
+// ];
 
 
 
