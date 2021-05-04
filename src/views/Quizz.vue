@@ -270,6 +270,10 @@ export default {
 </script>
 
 <style scoped>
+
+#app{
+  overflow-y: hidden;
+}
 .flex {
   display: flex;
   justify-content: center;

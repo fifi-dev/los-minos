@@ -40,7 +40,7 @@ export default {
 <style scoped>
 
 .testbio{
-    min-height: calc(3000px + 100vh);
+    min-height: calc(2500px + 100vh);
 }
 section.book{
     position: fixed;

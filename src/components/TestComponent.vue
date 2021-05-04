@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="pageCanvas">
   <canvas id="canvasContainer"></canvas>
   </div>
 </template>
@@ -14,10 +14,12 @@ export default {
 </script>
 
 <style scoped>
-
+#pageCanvas{
+  overflow: hidden;
+}
 canvas {
-  width: 100vw;
-  height: 100vh;
+  width: 80vw;
+  height: 2vh;
   top:0;
   left:0;
 }
