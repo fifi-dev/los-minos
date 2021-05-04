@@ -20,26 +20,14 @@
     </ul>
 </nav>
     </div>
-
-    <settings-card></settings-card>
-    <navigation-bar></navigation-bar>
-    <div v-if="$route.meta.header === 1">
-      <input type="checkbox" id="check">
-      <label for="check" class="open" id="black"><i class="fas fa-bars"></i></label>
-      <nav>
-         <label for="check" class="close"><i class="fas fa-times"></i></label>
-    <ul>
-      <h1>test</h1>
-        <li><router-link to="/home">Home</router-link></li>
-        <li><a href="/biographie">Biographie de Tassi Hangbe</a></li>
-        <li><router-link to="/galerie">Galerie</router-link> </li>
-        <li><router-link to="/about">About</router-link></li>
-        <li><a href="/mentions">Mentions legales</a></li>
-        <li><a href="/pre_quizz">Quizz</a></li>
-        <li><a href="mailto:nullepart@mozilla.org"><i class="fas fa-envelope"></i></a></li>
-    </ul>
-      </nav>
-   </div>
+    <div class="settings flex">
+                       <div class="volume-range">
+                           <input type= "range" class = "slider" id = "slider" value = "20" maxlength ="100">
+                       </div>
+                       <div class="fullScreen">
+                           <button id="fullScreen"><i class="fas fa-expand"></i></button>
+                       </div>
+                   </div>
    <transition
    mode="out-in"
    enter-active-class="animate__animated animate__fadeIn"
@@ -47,18 +35,16 @@
    >
     <router-view />
     </transition>
-	
-
-    <audio id="myMusic" src="@/assets/audio/backsong.mp3" loop="" autoplay></audio>
     
-
+<div class="audioC">
+                            <audio id="myMusic" class="myMusic" src="@/assets/audio/backsong.mp3" loop="" autoplay></audio>
+                       </div>
   </div>
 </template>
 
 
 <script>
-import NavigationBar from './components/NavigationBar.vue'
-
+import $ from 'jquery'
 
 export default {
     
@@ -69,19 +55,29 @@ data() {
     },
 
   components: {
-     NavigationBar
+    // NavigationBar
    }, 
    
    
 mounted() {
-        // Automatically play music effects, solve the WeChat automatic playback problem
-       document.addEventListener('touchstart',this.audioAutoPlay,false);
-       document.addEventListener('WeixinJSBridgeReady', this.audioAutoPlay,false);
-       let oAudio = document.querySelector("#audio");
-                 oAudio.onended = function () {//play is finished, replay loop
-            oAudio.load();
-            oAudio.play();
-        }
+        $("#fullScreen").click(function () {
+        document.fullScreenElement && null !== document.fullScreenElement || !document.mozFullScreen && !document.webkitIsFullScreen ? document.documentElement.requestFullScreen ? document.documentElement.requestFullScreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullScreen && document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen && document.webkitCancelFullScreen()
+    });
+
+     $("#slider").slider({
+value : 75,
+step  : 1,
+range : 'min',
+min   : 0,
+max   : 100,
+slide : function(){
+    var value = $("#slider").slider("value");
+    $("#myMusic").volume = (value / 100);
+}
+});
+
+   
+    
     },
    
      methods: {
@@ -100,6 +96,8 @@ mounted() {
                     audio.play();
                 document.removeEventListener('touchstart',this.audioAutoPlay);
             },
+
+
 
     playSound (sound) {
       if(sound) {
@@ -339,43 +337,6 @@ nav ul li a:hover::after{
     margin-left: 20px;
 }
 
-.volume {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.volume input[type=range] {
-    display: none;
-  }
-
-.bar-hoverbox {
-    padding: 10px 15px;
-    opacity: 0.7;
-    transition: opacity .2s;
-}
-
-.bar-hoverbox :hover{
-    opacity: 1;
-        cursor: pointer;
-}
-
- .bar {
-    background: #999;
-    height: 7px;
-    width: 120px;
-    border-radius: 15px;
-    overflow: hidden;
-     pointer-events: none;}
-
-.bar-fill {
-      background: #FFF;
-      width: 0%;
-      height: 100%;
-      background-clip: border-box;
-      pointer-events: none;
-    }
-
 /*Connexion affiché*/
 .block {
     display: block;
@@ -425,6 +386,15 @@ nav ul li a:hover::after{
     background-size:100%; 
 }
 
+#fullScreen{
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 
+.volume-range{
+    margin-right: 30px;
+}
 
 </style>

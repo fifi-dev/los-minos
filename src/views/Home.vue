@@ -31,22 +31,7 @@
                    </div>
                </div>
            </div>
-           <div class="settings flex">
-                       <div class="volume">
-                           <input type="range" min="0" max="100" value="50" class="volume-range">
-                           <div class="icon">
-                               <i class="fa fa-volume-up icon-size" aria-hidden="true"></i>
-                           </div>
-                           <div class="bar-hoverbox">
-                               <div class="bar">
-                                   <div class="bar-fill"></div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="openPanel">
-                       <i class="fas fa-cogs"></i>
-                       </div>
-                   </div>
+           
   </div>
            <div class="Container none">
              <settings-card></settings-card>
@@ -148,7 +133,7 @@ export default {
 
     });
 
-    /*
+
 
     $("#btn1").on('click', function(){
     $('#section2').fadeIn(500);
@@ -179,8 +164,19 @@ export default {
     $('#section7').fadeIn(500);
      $('#section6').fadeOut();
     });
-*/
 
+
+$("#slider").slider({
+value : 75,
+step  : 1,
+range : 'min',
+min   : 0,
+max   : 100,
+slide : function(){
+    var value = $("#slider").slider("value");
+    $("#myMusic").volume = (value / 100);
+}
+});
 
 
     $("#watchMode").on('click', function () {
@@ -257,17 +253,20 @@ body {
     box-shadow: inset 0 0 5px;
     border-radius: 10px;
     background: black;
+    display: none;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #bb9a73;
     border-radius: 10px;
+    display: none;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #a58763;
+    display: none;
 }
 
 
