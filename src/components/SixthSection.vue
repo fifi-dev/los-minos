@@ -10,7 +10,7 @@
                     <audio id="audio2" src="@/assets/audio/section2.mp3"></audio>
                    </div>
                      <div class="carrousel">
-	<div class="card" id="c0">h</div>
+	<div class="card" id="c0"></div>
 	<div class="card" id="c1"></div>
 	<div class="card" id="c2"></div>
 	<div class="card" id="c3"></div>
@@ -111,9 +111,7 @@ export default {
 
 }
 
-#section6{
-    display: none;
-}
+
 
 .detail a {
     text-decoration: none;
