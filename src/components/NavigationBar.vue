@@ -11,7 +11,7 @@
         <li><a href="/galerie">Galerie</a></li>
         <li><a href="/about">A Propos</a></li>
         <li><a href="/mentions">Mentions legales</a></li>
-        <li><a href="/quizz">Quizz</a></li>
+        <li><a href="/pre_quizz">Quizz</a></li>
         <li><a href="mailto:nullepart@mozilla.org"><i class="fas fa-envelope"></i></a></li>
     </ul>
 </nav>
