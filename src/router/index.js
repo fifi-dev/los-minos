@@ -9,6 +9,8 @@ import Quizz from "../views/Quizz.vue";
 import Mentions from "../views/Mentions.vue";
 import Contact from "../views/Contact.vue";
 import Threejs from "../views/Threejs.vue";
+import Test from "../views/Test.vue";
+import TestBio from "../views/TestBio.vue";
 
 Vue.use(VueRouter);
 
@@ -78,6 +80,22 @@ const routes = [
     path: "/threejs",
     name: "Threejs",
     component: Threejs,
+    meta: {
+      header: 1
+    }
+  },
+  {
+    path: "/test",
+    name: "Test",
+    component: Test,
+    meta: {
+      header: 1
+    }
+  },
+  {
+    path: "/testbio",
+    name: "TestBio",
+    component: TestBio,
     meta: {
       header: 1
     }

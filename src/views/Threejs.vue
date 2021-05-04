@@ -5,7 +5,7 @@
   </div>
 </template>
 
-// <script type="module">
+<script type="module">
 // import * as THREE from "three";
 // import * as OrbitControls from "three-orbitcontrols";
 // const scene = new THREE.Scene();
@@ -51,13 +51,47 @@
 // };
 
 // animate();
+import * as THREE from "three";
+export default {
+  mounted () {
+    this.initThree();
+  },
+
+  methods: {
+    initThree() {
+      this.scene = new THREE.Scene();
+      this.camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+      this.renderer = new THREE.WebGLRenderer( { canvas: document.getElementById( "background" ), alpha: true, antialias: true } );
+      this.renderer.setSize( window.innerWidth, window.innerHeight );
+
+      let geometry = new THREE.BoxGeometry( 1, 1, 1 );
+      let material = new THREE.MeshBasicMaterial( { color: 0x0000ff } );
+      this.cube = new THREE.Mesh( geometry, material );
+      this.scene.add( this.cube );
+
+      this.camera.position.z = 5;
+      this.animate()
+
+    },
+
+    animate() {
+
+      this.cube.rotation.x += 0.01;
+      this.renderer.render( this.scene, this.camera );
+      requestAnimationFrame(this.animate);
+
+    }
+  }
+}
+
 </script>
 
 
 <style scoped>
-
+/* 
 canvas{
     z-index: -99;
-}
+} */
 
 </style>
