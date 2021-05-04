@@ -66,8 +66,8 @@ h1{
 }
 
 .item{
-    margin-top: 5vh;
-    width: 450px;
+    margin-top: 4vh;
+    width: 460px;
 }
 
 </style>

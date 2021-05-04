@@ -126,6 +126,7 @@ export default {
     $("#btn1").on('click', function(){
     $('#section2').fadeIn(500);
      $('#section1').fadeOut();
+     $("#btn2").fadeIn(2000);
     });
 
     $("#btn2").on('click', function(){
