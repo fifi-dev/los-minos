@@ -246,7 +246,6 @@ body {
 ::-webkit-scrollbar {
     width: 20px;
     background: black;
-    display: none;
 }
 /* Track */
 ::-webkit-scrollbar-track {

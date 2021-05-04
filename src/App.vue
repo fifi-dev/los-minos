@@ -37,7 +37,7 @@
     </transition>
     
 <div class="audioC">
-                            <audio id="myMusic" class="myMusic" src="@/assets/audio/backsong.mp3" loop="" autoplay></audio>
+                            <audio id="myMusic" class="myMusic" src="@/assets/audio/backsong.mp3" loop="" ></audio>
                        </div>
   </div>
 </template>
