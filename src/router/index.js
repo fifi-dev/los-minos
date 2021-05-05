@@ -7,7 +7,6 @@ import Biographie from "../views/Biographie.vue";
 import Pre_quizz from "../views/Pre_quizz.vue";
 import Quizz from "../views/Quizz.vue";
 import Mentions from "../views/Mentions.vue";
-import Contact from "../views/Contact.vue";
 
 Vue.use(VueRouter);
 
@@ -61,14 +60,6 @@ const routes = [
     path: "/mentions",
     name: "Mentions",
     component: Mentions,
-    meta: {
-      header: 1
-    }
-  },
-  {
-    path: "/contact",
-    name: "Contact",
-    component: Contact,
     meta: {
       header: 1
     }

@@ -68,6 +68,10 @@
     background: #a58763;
 }
 
+.mentions{
+    text-align: left;
+}
+
 h1{
 	text-align: center;
     padding-top: 50px;
@@ -86,6 +90,7 @@ h1{
 
 .petitediv{
 	margin-top: 20px;
+    text-align: center;
 }
 
 .boite{
@@ -102,7 +107,7 @@ h1{
     margin: 15px;
     padding: 15px auto;
 }
-.boite p{
+.boite p, .boite ul{
     padding: 0px 20px;
 }
 .mentions{

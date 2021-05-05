@@ -10,8 +10,8 @@
     <div class="panel" >
                <div class="popup">
                    
-                   <h1>Quelle experience souhaitez-vous ?</h1>
-                   <div class="info">Pour vous offrir la meilleure experience possible, Veulliez lire les indications suivantes</div>
+                   <h1>Quelle expérience souhaitez-vous ?</h1>
+                   <div class="info">Pour vous offrir la meilleure experience possible, veuillez lire les indications suivantes :</div>
                    <div class="mode">
                        <div class="read">
                            <i class="fas fa-book"></i><br>
