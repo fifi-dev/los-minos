@@ -15,7 +15,7 @@
                    <div class="mode">
                        <div class="read">
                            <i class="fas fa-book"></i><br>
-                           <button id="readMode" class="btn">Déouvrir l'histoire</button>
+                           <button id="readMode" class="btn">Découvrir l'histoire</button>
                        </div>
                    </div>
                    <div class="settingsCheckbox">

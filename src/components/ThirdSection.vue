@@ -3,14 +3,17 @@
     <!-- troisieme section-->
        <article id="secion3" class="section section3">
             <p>Une armée de guerrières plus fortes et plus vaillantes que les hommes appelées les Mino ( « nos mère » en langue fon ) et les Amazones par les colons</p>
-            <div class="listen" >
-                       <!-- @click.prevent="playSound('@/assets/audio/section2.mp3')" -->
-                       <div class="bgAudio2">
-                           <input type="checkbox" id="bgMusic" name="bgMusic">
-                         <audio id="myAudio2" src="@/assets/audio/section2.mp3" loop=""></audio> 
-                       </div>
+            <div>
+                       <button id="listenBtn2"><i class="fas fa-assistive-listening-systems"></i></button>
+                    <audio src="@/assets/audio/section2.mp3" id="music3"></audio>
+                    <div class="player3">
+  <a id="play-btn3">
+<i class="fa fa-play playing3" aria-hidden="true"></i>
+<i class="fa fa-pause pausing3" aria-hidden="true" style="display:none"></i>
+ </a>
+</div>
                    </div>
-            <a class="button" id="btn3" href="#section3"><navigate-btn></navigate-btn ></a>
+            <a class="button" id="btn3" href="#section2"><navigate-btn></navigate-btn ></a>
             <div class="imgC">
                 <img src="@/assets/img/men_and_the_amazone.svg" alt="les soldats et les amazones">
             </div>
@@ -20,7 +23,6 @@
 
 <script>
 import NavigateBtn from './NavigateBtn.vue';
-import $ from 'jquery'
 
 export default {
     data() {
@@ -32,20 +34,6 @@ export default {
   components: {
     NavigateBtn
   },
-  mounted () {
-      this.$nextTick(() => {
-           $("#bgMusic").click(function () {
-        if ($(this).prop("checked") == true) {
-            alert("La musique va se lanncer.");
-            $("#myAudio2")[0].play();
-        } else if ($(this).prop("checked") == false) {
-            alert("La musique de fond va se mettre en pause");
-            $("#myAudio2")[0].pause();
-        }
-    });
-      })
-  }
-
 }
   
 </script>

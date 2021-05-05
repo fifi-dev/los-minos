@@ -6,10 +6,15 @@
                        <img src="@/assets/img/kingdom_dahomey.svg" alt="amazones et le roi">
                    </div>
                    <p>Éduquées au combat, elles vouent leur vie entière à la défense du roi et de son royaume.</p>
-                   <div class="listen" >
-                       <!-- @click.prevent="playSound('@/assets/audio/section2.mp3')" -->
-                       <button id="listenBtn4"><i class="fas fa-assistive-listening-systems"></i></button>
-                    <audio id="audio2" src="@/assets/audio/section5.mp3"></audio>
+                   <div>
+                       <button id="listenBtn2"><i class="fas fa-assistive-listening-systems"></i></button>
+                    <audio src="@/assets/audio/section5.mp3" id="music5"></audio>
+                    <div class="player5">
+  <a id="play-btn5">
+<i class="fa fa-play playing5" aria-hidden="true"></i>
+<i class="fa fa-pause pausing5" aria-hidden="true" style="display:none"></i>
+ </a>
+</div>
                    </div>
                    <a class="button" id="btn5" href="#"><navigate-btn v-show="BtnVisible"></navigate-btn ></a>
                </article>

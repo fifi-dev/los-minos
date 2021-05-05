@@ -3,12 +3,17 @@
     <!-- septième section-->
                <article class="section flex none" id="section7">
                        <p>De plus elle étaient conditionnées a des rituels magicoreligieux qui permettaient à solidifier l’esprit de guerrière. <br>
-                        <button id="listenBtn6"><i class="fas fa-assistive-listening-systems"></i></button>
+                        <a id="play-btn7">
+<i class="fa fa-play playing7" aria-hidden="true"></i>
+<i class="fa fa-pause pausing7" aria-hidden="true" style="display:none"></i>
+ </a>
                        <a class="button" id="btn7" href="#"><navigate-btn></navigate-btn></a>
                        </p>
-                   <div class="listen" >
-                       <!-- @click.prevent="playSound('@/assets/audio/section2.mp3')" -->
-                    <audio id="audio2" src="@/assets/audio/section7.mp3"></audio>
+                   <div>
+                    <audio src="@/assets/audio/section7.mp3" id="music7"></audio>
+                    <div class="player7">
+  
+</div>
                    </div>
                    <div class="ritualsImg">
                        <img src="@/assets/img/rituals_people.png" alt="people doing rituals">

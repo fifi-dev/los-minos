@@ -4,10 +4,15 @@
      <article class="section" id="section6">
                    <p>En service un jour sur deux, les guerrières subissent un
                        entrainement physique quotidien très dur.</p>
-                       <div class="listen" >
-                       <!-- @click.prevent="playSound('@/assets/audio/section2.mp3')" -->
-                       <button id="listenBtn5"><i class="fas fa-assistive-listening-systems"></i></button>
-                    <audio id="audio2" src="@/assets/audio/section6.mp3"></audio>
+                       <div>
+                       <button id="listenBtn2"><i class="fas fa-assistive-listening-systems"></i></button>
+                    <audio src="@/assets/audio/section6.mp3" id="music6"></audio>
+                    <div class="player6">
+  <a id="play-btn6">
+<i class="fa fa-play playing6" aria-hidden="true"></i>
+<i class="fa fa-pause pausing6" aria-hidden="true" style="display:none"></i>
+ </a>
+</div>
                    </div>
                      <div class="carrousel">
 	<div class="card" id="c0"></div>

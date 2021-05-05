@@ -9,8 +9,15 @@
                        <p> Ces femmes aux têtes rasées coiffé d’un bonnet blanc orné de caïmans bleus avec une démarche virile et le regard noir ne prétendaient pas les égaler, les hommes, mais les surpassent.</p>
                        <img src="@/assets/img/army.jpg" alt="armé rang" style="width:400px;">
                        <p>Une armée de femme unique au monde au XVIIIe siècle. </p>
-                       <div class="listen"  @click.prevent="playSound('http://soundbible.com/mp3/Elevator Ding-SoundBible.com-685385892.mp3')">
-                   <i class="fas fa-assistive-listening-systems"></i>
+                       <div>
+                       <button id="listenBtn2"><i class="fas fa-assistive-listening-systems"></i></button>
+                    <audio src="@/assets/audio/section3.mp3" id="music4"></audio>
+                    <div class="player4">
+  <a id="play-btn4">
+<i class="fa fa-play playing4" aria-hidden="true"></i>
+<i class="fa fa-pause pausing4" aria-hidden="true" style="display:none"></i>
+ </a>
+</div>
                    </div>
                        
                    </div>

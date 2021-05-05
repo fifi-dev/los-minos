@@ -10,9 +10,15 @@
                    <div class="listen" >
                        <!-- @click.prevent="playSound('@/assets/audio/section2.mp3')" -->
                        <button id="listenBtn2"><i class="fas fa-assistive-listening-systems"></i></button>
-                    <audio id="audio2" src="@/assets/audio/section2.mp3"></audio>
                    </div>
+<audio src="@/assets/audio/section1.mp3" id="music"></audio>
 
+<div class="player2">
+  <a id="play-btn2">
+<i class="fa fa-play playing2" aria-hidden="true"></i>
+<i class="fa fa-pause pausing2" aria-hidden="true" style="display:none"></i>
+ </a>
+</div>
                </article>
     </div>
 </template>
@@ -31,11 +37,39 @@ export default {
     NavigateBtn
   },
   mounted (){
-      this.$nextTick(() => {
-          $("#listenBtn2").click(function() {
-                        $("#audio2").play();
-                    });
-      })
+    var isPlaying = false;
+
+$(document).ready(function() {
+    bindEvents();
+});
+
+function bindEvents() {
+    $('#play-btn2').bind('click', function() {
+        if (isPlaying) {
+            console.log(' pas play');
+            $('.playing2').show();
+            $('#music')[0].pause();
+            $('.pausing2').hide();
+
+        } else {
+            $('#music')[0].play();
+            console.log(' play');
+            $('.playing2').hide();
+            $('.pausing2').show();
+        }
+   
+        isPlaying = !isPlaying;
+
+    });
+}
+
+
+        $('.stop2').bind('click', function() {
+            if (isPlaying) {
+                $('.playing2').trigger('click');
+                $('#music')[0].currentTime = 0;
+            }
+        });
   },
   methods: {
     playSound (sound) {
@@ -108,6 +142,12 @@ export default {
   user-select: none;
   max-width: 400px;
 }
+
+
+.btn {
+  margin-left: 10%;
+}
+
 
 
 

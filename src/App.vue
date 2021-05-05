@@ -25,9 +25,23 @@
                            <input type="checkbox" id="bgMusic" name="bgMusic" checked>
                         <!--   <audio id="myMusic" src="@/assets/audio/backsong.mp3" loop="" autoplay></audio> -->
                        </div>
-                       <div class="volume-range">
-                           <input type= "range" class = "slider" id = "slider" value = "20" maxlength ="100">
-                       </div>
+                       <div class="player">
+  <a id="play-btn">
+<i class="fa fa-play playing" aria-hidden="true"></i>
+<i class="fa fa-pause pausing" aria-hidden="true" style="display:none"></i>
+ </a>
+  <a id="volume-btn">
+<i class="fa fa-volume-up volume" aria-hidden="true"></i>
+<i class="fa fa-volume-off muting" aria-hidden="true" style="display:none"></i>
+  </a>
+  <span class="btn">
+		<input type="range" min="0" max="1" step="0.1" id="volumeRange">
+	</span>
+  <div class="progress">
+		<div class="currentValue"></div>
+	</div>
+</div>
+
                        <div class="fullScreen">
                            <button id="fullScreen"><i class="fas fa-expand"></i></button>
                        </div>
@@ -64,6 +78,15 @@ data() {
    
    
 mounted() {
+
+    $(document).ready(function() {
+    Mute();
+     bindEvents3();
+     bindEvents4();
+     bindEvents5();
+     bindEvents6();
+     bindEvents7();
+});
     $("#bgMusic").click(function () {
         if ($(this).prop("checked") == true) {
             alert("La musique va se lanncer.");
@@ -73,22 +96,140 @@ mounted() {
             $("#myMusic")[0].pause();
         }
     });
+
+function Mute() {
+        $('#volume-btn').bind('click', function() {
+            if ($('#myMusic')[0].muted) {
+                $('.volume').show();
+                $('.muting').hide();
+            } else {
+                $('.volume').hide();
+                $('.muting').show();
+            }
+            $('#myMusic')[0].muted = !$('#myMusic')[0].muted;
+        });
+    }
+
+$('#volumeRange').bind('change', function(){
+		$('#myMusic')[0].volume = $(this).val();
+	});
+
         $("#fullScreen").click(function () {
         document.fullScreenElement && null !== document.fullScreenElement || !document.mozFullScreen && !document.webkitIsFullScreen ? document.documentElement.requestFullScreen ? document.documentElement.requestFullScreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullScreen && document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen && document.webkitCancelFullScreen()
     });
 
-     $("#slider").slider({
-value : 75,
-step  : 1,
-range : 'min',
-min   : 0,
-max   : 100,
-slide : function(){
-    var value = $("#slider").slider("value");
-    $("#myMusic").volume = (value / 100);
-}
-});
 
+var playing = false;
+
+function bindEvents3() {
+    $('#play-btn3').bind('click', function() {
+        if (playing) {
+            console.log(' pas play');
+            $('.playing3').show();
+            $('#music3')[0].pause();
+            $('.pausing3').hide();
+
+        } else {
+            $('#music3')[0].play();
+            console.log(' play');
+            $('.playing3').hide();
+            $('.pausing3').show();
+        }
+   
+        playing = !playing;
+
+    });
+}
+
+var playing4 = false;
+
+function bindEvents4() {
+    $('#play-btn4').bind('click', function() {
+        if (playing4) {
+            console.log(' pas play');
+            $('.playing4').show();
+            $('#music4')[0].pause();
+            $('.pausing4').hide();
+
+        } else {
+            $('#music4')[0].play();
+            console.log(' play');
+            $('.playing4').hide();
+            $('.pausing4').show();
+        }
+   
+        playing4 = !playing4;
+
+    });
+}
+
+var playing5 = false;
+
+function bindEvents5() {
+    $('#play-btn5').bind('click', function() {
+        if (playing5) {
+            console.log(' pas play');
+            $('.playing5').show();
+            $('#music5')[0].pause();
+            $('.pausing5').hide();
+
+        } else {
+            $('#music5')[0].play();
+            console.log(' play');
+            $('.playing5').hide();
+            $('.pausing5').show();
+        }
+   
+        playing5 = !playing5;
+
+    });
+}
+
+var playing6 = false;
+
+function bindEvents6() {
+    $('#play-btn6').bind('click', function() {
+        if (playing6) {
+            console.log(' pas play');
+            $('.playing6').show();
+            $('#music6')[0].pause();
+            $('.pausing6').hide();
+
+        } else {
+            $('#music6')[0].play();
+            console.log(' play');
+            $('.playing6').hide();
+            $('.pausing6').show();
+        }
+   
+        playing6 = !playing6;
+
+    });
+}
+
+
+var playing7 = false;
+
+function bindEvents7() {
+    $('#play-btn7').bind('click', function() {
+        if (playing7) {
+            console.log(' pas play');
+            $('.playing7').show();
+            $('#music7')[0].pause();
+            $('.pausing7').hide();
+
+        } else {
+            $('#music7')[0].play();
+            console.log(' play');
+            $('.playing7').hide();
+            $('.pausing7').show();
+        }
+   
+        playing7 = !playing7;
+
+    });
+}
+  
    
     
     },
@@ -294,6 +435,11 @@ nav ul li a:hover::after{
 .fas {
     margin-bottom: 20px;
     font-size: 20px;
+    color: white;
+}
+
+.fa {
+    color: white;
 }
 
 .panel .info {
