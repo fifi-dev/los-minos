@@ -38,6 +38,7 @@
             <h2>Question {{ b }}/{{ questions.length }}</h2>
           </div>
           <div class="box-score" v-if="score_show">
+            <div class="space">
             <h2>Votre score est</h2>
             <h2>{{ score }}/{{ questions.length }}</h2>
             <div class="btn-restart">
@@ -45,18 +46,19 @@
                 Recommencer <i class="fas fa-sync-alt"></i>
               </button>
             </div>
+            </div>
           </div>
           <div class="footer-quiz">
             <div v-if="progress < 100" class="box-button">
               <button
                 @click="skipQuestion()"
-                :style="next ? 'background-color: rgb(106, 128, 202)' : ''"
+                :style="next ? 'background-color: #db5c17' : ''"
               >
                 Passer
               </button>
               <button
                 @click="nextQuestion()"
-                :style="!next ? 'background-color: rgb(106, 128, 202)' : ''"
+                :style="!next ? 'background-color: #db5c17' : ''"
               >
                 Next
               </button>
@@ -69,7 +71,7 @@
 </template>
 
 <script>
-import ThreeCube from "../components/TestComponent";
+import ThreeCube from "../components/BackgroundThreejs";
 
 export default {
   name: "App",
@@ -136,8 +138,8 @@ export default {
         {
           question: "Qui sont les Mino ?",
           propositions: [
-            { props: "Le régiment de combat exclusivement féminin", correct: true },
             { props: "Les servantes de Tasi Hangbè" },
+            { props: "Le régiment de combat exclusivement féminin", correct: true },
             { props: "Les esclaves du royaume" },
           ],
         },
@@ -152,9 +154,9 @@ export default {
         {
           question: "Quand le régiment des femmes soldats a-t-il été créé ?",
           propositions: [
-            { props: "18e siècle", correct: true },
             { props: "17e siècle" },
             { props: "16e siècle" },
+            { props: "18e siècle", correct: true },
           ],
         },
         {
@@ -176,33 +178,33 @@ export default {
         {
           question: "Où vivaient les femmes soldats du Dahomey ?",
           propositions: [
-            { props: "Dans les palais royaux", correct: true },
             { props: "Dans un appartement spatial" },
+            { props: "Dans les palais royaux", correct: true },
             { props: "Avec leur famille" },
           ],
         },
         {
           question: "De quoi les guerrières étaient conditionnées à faire pour solidifier l’esprit de guerrière ?",
           propositions: [
-            { props: "Des rituels magicoreligieux", correct: true },
             { props: "Une danse traditionnelle" },
             { props: "Une activité relaxante comme le yoga" },
+            { props: "Des rituels magicoreligieux", correct: true },
           ],
         },
         {
           question: "A quoi devaient s’astreindre les femmes qui devenaient femmes soldats ?",
           propositions: [
-            { props: "Au célibat", correct: true },
             { props: "Ne prendre soin d’elle" },
+            { props: "Au célibat", correct: true },
             { props: "Ne pas sortir" },
           ],
         },
         {
           question: "Quand le régiment des femmes soldats a-t-il disparu ?",
           propositions: [
-            { props: "A la fin du 19e siècle", correct: true },
             { props: "Au début fin du 18e siècle" },
             { props: "A la fin du 17e siècle" },
+            { props: "A la fin du 19e siècle", correct: true },
           ],
         },
       ],
@@ -279,9 +281,6 @@ export default {
   justify-content: center;
 }
 
-/* #background{
-  z-index: -9999;
-} */
 #entirequiz {
   position: absolute;
   margin: 0 auto;
@@ -295,11 +294,9 @@ export default {
 }
 
 .container-quiz {
-  /* filter: blur(2px); */
   display: flex;
   max-width: 500px;
   width: 100%;
-  /* height: 85%; */
   background-color: white;
   text-align: center;
   flex-flow: column;
@@ -333,7 +330,7 @@ export default {
 }
 
 .box-question {
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 .box-question p {
@@ -349,7 +346,8 @@ export default {
 
 ul {
   display: flex;
-  width: 80%;
+  max-width: 400px;
+  width: 100%;
   margin: 0;
   padding: 0;
   flex-flow: column;
@@ -392,11 +390,16 @@ li > div {
   border-top: 1px solid #e7eae0;
   background-color: #e7eae0;
   border-radius: 0px 0px 10px 10px;
+  padding: 20px;
 }
 
 .box {
   text-align: center;
   margin: 0;
+}
+
+.box h2{
+  margin-bottom: 20px;
 }
 
 .box-button {
@@ -414,7 +417,6 @@ li > div {
   cursor: pointer;
   border-radius: 15px;
   margin: auto;
-  margin-bottom: 10px;
   letter-spacing: 2px;
   background-color: #a09f9ff5;
 }
@@ -435,14 +437,17 @@ li.incorrect {
 
 .box-score {
   display: flex;
-  max-width: 500px;
-  /* width: 100%;
-  height: 70%; */
+  max-width: 1500px;
+  width: 100%;
   flex-flow: column;
 }
 
 .box-score h2 {
   margin-top: 40px;
+}
+
+.space{
+  margin: 0 40px;
 }
 
 i {
@@ -459,36 +464,21 @@ i {
 }
 
 .btn-restart button {
-  width: 150px;
+  width: 200px;
   height: 35px;
   outline: none;
   border: 0;
-  background-color: rgb(106, 128, 202);
+  background-color: #db5c17;
   color: white;
   font-size: 18px;
   cursor: pointer;
   border-radius: 15px;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   letter-spacing: 2px;
 }
 
 .next {
-  background-color: rgb(106, 128, 202);
+  background-color: #db5c17;
 }
-/* 
-@media screen and (max-width: 900px) {
-    .container-quiz {
-        width: 60%;
-    }
-}
-
-@media screen and (max-width: 720px) {
-    .container-quiz {
-        width: 80%;
-    }
-    .footer-quiz .box-button button {
-        width: 100px;
-    }
-}  */
 </style>
