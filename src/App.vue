@@ -158,6 +158,7 @@ body{
     padding: 0;
     background-color: black;
     color: white;
+    overflow-x: hidden;
 }
 
 h1{

@@ -39,8 +39,8 @@ scene.add( cube );
 
 camera.position.z = 6;
 
-let currentTimeline = window.pageYOffset / 2500
-let aimTimeline = window.pageYOffset / 2500
+let currentTimeline = window.pageYOffset / 2000
+let aimTimeline = window.pageYOffset / 2000
 
 function animate(){
     requestAnimationFrame( animate );
@@ -57,5 +57,5 @@ function animate(){
 animate();
 
 window.addEventListener("scroll", function(){
-    aimTimeline = window.pageYOffset / 2500
+    aimTimeline = window.pageYOffset / 2000
 })

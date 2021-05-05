@@ -4,10 +4,6 @@
       <img src="@/assets/img/logo_1.png" alt="le_logo" />
     </div>
 
-    <div id="hr_quiz">
-      <hr />
-    </div>
-
     <div id="quiz">
       <h1>
         Connaissez-vous réellement
@@ -44,24 +40,13 @@
   height: auto;
 }
 
-#hr_quiz {
-  width: 100%;
-  text-align: center;
-}
-
-#hr_quiz hr {
-  border: 3px double rgb(255, 255, 255);
-  overflow: visible;
-  text-align: center;
-  max-width: 400px;
-}
-
 #quiz {
   width: 100%;
 }
 
 #quiz h1 {
   text-transform: uppercase;
+  margin-top: 40px;
 }
 
 #quiz h1 span {
