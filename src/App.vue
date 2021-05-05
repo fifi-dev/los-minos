@@ -26,10 +26,6 @@
                         <!--   <audio id="myMusic" src="@/assets/audio/backsong.mp3" loop="" autoplay></audio> -->
                        </div>
                        <div class="player">
-  <a id="play-btn">
-<i class="fa fa-play playing" aria-hidden="true"></i>
-<i class="fa fa-pause pausing" aria-hidden="true" style="display:none"></i>
- </a>
   <a id="volume-btn">
 <i class="fa fa-volume-up volume" aria-hidden="true"></i>
 <i class="fa fa-volume-off muting" aria-hidden="true" style="display:none"></i>
@@ -553,14 +549,38 @@ nav ul li a:hover::after{
     color: white;
     border: none;
     cursor: pointer;
+    border: none;
+}
+
+.bgmusic{
+    margin-top: 15px;
+    margin-right: 5px;
 }
 
 .volume-range{
     margin-right: 30px;
+    
 }
 
-.bgmusic{
-    margin-right: 20px;
+.fullScreen{
+    margin-top: 15px;
+}
+
+.player{
+    margin: 0;
+    color: white;
+    margin: auto 10px;
+    text-align: start;
+}
+
+.player span{
+    border: none;
+    margin-left: 10px;
+}
+
+
+.player .volume-btn{
+    margin-right: 10px;
 }
 
 </style>
